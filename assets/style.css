@@ -1,0 +1,43 @@
+  body {
+    font-family: "Lato", sans-serif;
+    margin: 50;
+    background-color: #F7F7F7;
+    border-radius: 25px;
+}
+
+div {
+    background-color: #222222;
+    border-radius: 10px;
+    padding: 10px;
+    /* height: 256px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+
+.header-title {
+    color: #FFFFFF;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+
+.header-description {
+    color: #CFCFCF;
+    margin: 4px auto;
+    text-align: center;
+    max-width: 384px;
+    
+}
+
+#dropdown {
+    color: white;
+
+}
+
+#my-graph {
+    border-radius: 25px;
+
+}

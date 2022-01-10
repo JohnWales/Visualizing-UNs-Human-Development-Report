@@ -55,13 +55,54 @@ fig2 = px.bar(df, x = 'Country_code', y = '2019',
 fig3 = px.scatter(df1, x = 'Country_code', y = '2019', hover_name="Country_name")
 
 # Life Expectancy 2019 Line Graph
-fig4 = px.line(df1, x = 'Country_code', y = '2019', title='Line Graph')
+fig4 = px.line(df1, x = 'Country_code', y = '2019', title='Line Graph', hover_name="Country_name")
 
 # fig5 = px.strip(df1, x='Country_code', y='2019')
 
 
+external_stylesheets = [
+    {
+        "href": "https://fonts.googleapis.com/css2?"
+                "family=Lato:wght@400;700&display=swap",
+        "rel": "stylesheet",
+    },
+]
 
 app.layout = html.Div(children=[
+
+
+    html.Div([
+        html.H1(children="Visualising the Human Developemnt Report", className='header-title', style={'fontSize': '48px', 'text-align': 'center'}),
+        html.P(children="This is a visual representation on the United Nations Human Developemtn Report from 1990 to present day.", className='header-description'),
+
+    dcc.Dropdown(id='dropdown', value=[], multi=True,
+    options=[{'label': x, 'value': x} for x in
+            df.Country_name.unique()]),
+    # dcc.Dropdown(id='dpdn3', value=[], multi=True,
+    #         options=[{'label': x, 'value': x} for x in
+    #                 df1.Country_name.unique()]),
+
+
+    dcc.Graph(id='my-graph', figure={}, clickData=None, hoverData=None, # I assigned None for tutorial purposes. By defualt, these are None, unless you specify otherwise.
+        config={
+            'staticPlot': False,     # True, False
+            'scrollZoom': True,      # True, False
+            'doubleClick': 'reset',  # 'reset', 'autosize' or 'reset+autosize', False
+            'showTips': False,       # True, False
+            'displayModeBar': True,  # True, False, 'hover'
+            'watermark': True,
+            # 'modeBarButtonsToRemove': ['pan2d','select2d'],
+            },
+        className='six columns'
+        )
+    ]),
+
+
+
+
+
+
+
     html.Div([
     html.H1("HDI values for all countries in 2019", style={'text-align': 'center'}),
     dcc.Graph(
@@ -111,27 +152,7 @@ app.layout = html.Div(children=[
 
 
 
-    dcc.Dropdown(id='dpdn2', value=[], multi=True,
-            options=[{'label': x, 'value': x} for x in
-                    df.Country_name.unique()]),
-    # dcc.Dropdown(id='dpdn3', value=[], multi=True,
-    #         options=[{'label': x, 'value': x} for x in
-    #                 df1.Country_name.unique()]),
-    html.Div([
-        html.H1("Dropdown Graph", style={'text-align': 'center'}),
-        dcc.Graph(id='my-graph', figure={}, clickData=None, hoverData=None, # I assigned None for tutorial purposes. By defualt, these are None, unless you specify otherwise.
-            config={
-                'staticPlot': False,     # True, False
-                'scrollZoom': True,      # True, False
-                'doubleClick': 'reset',  # 'reset', 'autosize' or 'reset+autosize', False
-                'showTips': False,       # True, False
-                'displayModeBar': True,  # True, False, 'hover'
-                'watermark': True,
-                # 'modeBarButtonsToRemove': ['pan2d','select2d'],
-                },
-            className='six columns'
-            )
-    ]),
+
 
 
 
@@ -173,7 +194,7 @@ app.layout = html.Div(children=[
 
 @app.callback(
 Output(component_id='my-graph', component_property='figure'),
-Input(component_id='dpdn2', component_property='value')
+Input(component_id='dropdown', component_property='value')
 )
 
 def update_graph(country_chosen):
