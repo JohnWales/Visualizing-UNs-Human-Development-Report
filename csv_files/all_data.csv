@@ -898,3 +898,623 @@ CAF,2017,Central African Republic,0.391,0.496
 CAF,2018,Central African Republic,0.395,0.505
 CAF,2019,Central African Republic,0.39,0.51
 
+CAN,1990,Canada,0.85,0.882
+CAN,1991,Canada,0.854,0.884
+CAN,1992,Canada,0.857,0.887
+CAN,1993,Canada,0.855,0.89
+CAN,1994,Canada,0.859,0.892
+CAN,1995,Canada,0.862,0.895
+CAN,1996,Canada,0.864,0.897
+CAN,1997,Canada,0.863,0.9
+CAN,1998,Canada,0.861,0.903
+CAN,1999,Canada,0.864,0.906
+CAN,2000,Canada,0.867,0.91
+CAN,2001,Canada,0.871,0.913
+CAN,2002,Canada,0.877,0.916
+CAN,2003,Canada,0.882,0.92
+CAN,2004,Canada,0.888,0.923
+CAN,2005,Canada,0.894,0.927
+CAN,2006,Canada,0.898,0.93
+CAN,2007,Canada,0.896,0.933
+CAN,2008,Canada,0.898,0.937
+CAN,2009,Canada,0.898,0.94
+CAN,2010,Canada,0.901,0.943
+CAN,2011,Canada,0.903,0.946
+CAN,2012,Canada,0.906,0.949
+CAN,2013,Canada,0.913,0.951
+CAN,2014,Canada,0.918,0.953
+CAN,2015,Canada,0.921,0.954
+CAN,2016,Canada,0.923,0.956
+CAN,2017,Canada,0.926,0.957
+CAN,2018,Canada,0.928,0.959
+CAN,2019,Canada,0.92,0.96
+
+CHE,1990,Switzerland,0.84,0.886
+CHE,1991,Switzerland,0.842,0.888
+CHE,1992,Switzerland,0.845,0.891
+CHE,1993,Switzerland,0.849,0.894
+CHE,1994,Switzerland,0.852,0.897
+CHE,1995,Switzerland,0.856,0.901
+CHE,1996,Switzerland,0.863,0.905
+CHE,1997,Switzerland,0.872,0.909
+CHE,1998,Switzerland,0.882,0.913
+CHE,1999,Switzerland,0.889,0.917
+CHE,2000,Switzerland,0.898,0.921
+CHE,2001,Switzerland,0.9,0.925
+CHE,2002,Switzerland,0.899,0.929
+CHE,2003,Switzerland,0.905,0.933
+CHE,2004,Switzerland,0.909,0.937
+CHE,2005,Switzerland,0.914,0.941
+CHE,2006,Switzerland,0.92,0.945
+CHE,2007,Switzerland,0.923,0.948
+CHE,2008,Switzerland,0.925,0.952
+CHE,2009,Switzerland,0.935,0.955
+CHE,2010,Switzerland,0.941,0.958
+CHE,2011,Switzerland,0.941,0.961
+CHE,2012,Switzerland,0.944,0.963
+CHE,2013,Switzerland,0.946,0.966
+CHE,2014,Switzerland,0.942,0.969
+CHE,2015,Switzerland,0.947,0.971
+CHE,2016,Switzerland,0.947,0.974
+CHE,2017,Switzerland,0.949,0.977
+CHE,2018,Switzerland,0.955,0.979
+CHE,2019,Switzerland,0.95,0.981
+
+CHL,1990,Chile,0.706,0.823
+CHL,1991,Chile,0.715,0.828
+CHL,1992,Chile,0.722,0.832
+CHL,1993,Chile,0.715,0.837
+CHL,1994,Chile,0.72,0.841
+CHL,1995,Chile,0.728,0.845
+CHL,1996,Chile,0.735,0.85
+CHL,1997,Chile,0.742,0.854
+CHL,1998,Chile,0.743,0.859
+CHL,1999,Chile,0.75,0.863
+CHL,2000,Chile,0.756,0.867
+CHL,2001,Chile,0.767,0.871
+CHL,2002,Chile,0.769,0.875
+CHL,2003,Chile,0.776,0.879
+CHL,2004,Chile,0.785,0.883
+CHL,2005,Chile,0.791,0.887
+CHL,2006,Chile,0.791,0.89
+CHL,2007,Chile,0.804,0.894
+CHL,2008,Chile,0.814,0.897
+CHL,2009,Chile,0.822,0.901
+CHL,2010,Chile,0.803,0.904
+CHL,2011,Chile,0.815,0.907
+CHL,2012,Chile,0.821,0.91
+CHL,2013,Chile,0.826,0.913
+CHL,2014,Chile,0.837,0.915
+CHL,2015,Chile,0.842,0.918
+CHL,2016,Chile,0.845,0.92
+CHL,2017,Chile,0.847,0.922
+CHL,2018,Chile,0.849,0.924
+CHL,2019,Chile,0.851,0.926
+
+CHN,1990,China,0.499,0.756
+CHN,1991,China,0.507,0.758
+CHN,1992,China,0.517,0.759
+CHN,1993,China,0.527,0.761
+CHN,1994,China,0.534,0.764
+CHN,1995,China,0.545,0.767
+CHN,1996,China,0.554,0.771
+CHN,1997,China,0.563,0.776
+CHN,1998,China,0.571,0.781
+CHN,1999,China,0.579,0.786
+CHN,2000,China,0.588,0.791
+CHN,2001,China,0.596,0.796
+CHN,2002,China,0.606,0.801
+CHN,2003,China,0.618,0.806
+CHN,2004,China,0.628,0.811
+CHN,2005,China,0.64,0.815
+CHN,2006,China,0.653,0.82
+CHN,2007,China,0.667,0.824
+CHN,2008,China,0.678,0.828
+CHN,2009,China,0.687,0.833
+CHN,2010,China,0.699,0.837
+CHN,2011,China,0.707,0.842
+CHN,2012,China,0.716,0.846
+CHN,2013,China,0.724,0.851
+CHN,2014,China,0.731,0.856
+CHN,2015,China,0.739,0.86
+CHN,2016,China,0.746,0.865
+CHN,2017,China,0.75,0.869
+CHN,2018,China,0.755,0.872
+CHN,2019,China,0.761,0.876
+
+CIV,1990,Cote d'Ivoire,0.404,0.512
+CIV,1991,Cote d'Ivoire,0.404,0.509
+CIV,1992,Cote d'Ivoire,0.405,0.504
+CIV,1993,Cote d'Ivoire,0.406,0.499
+CIV,1994,Cote d'Ivoire,0.407,0.493
+CIV,1995,Cote d'Ivoire,0.409,0.486
+CIV,1996,Cote d'Ivoire,0.412,0.479
+CIV,1997,Cote d'Ivoire,0.415,0.472
+CIV,1998,Cote d'Ivoire,0.414,0.465
+CIV,1999,Cote d'Ivoire,0.419,0.46
+CIV,2000,Cote d'Ivoire,0.421,0.456
+CIV,2001,Cote d'Ivoire,0.424,0.454
+CIV,2002,Cote d'Ivoire,0.426,0.453
+CIV,2003,Cote d'Ivoire,0.429,0.455
+CIV,2004,Cote d'Ivoire,0.433,0.458
+CIV,2005,Cote d'Ivoire,0.438,0.463
+CIV,2006,Cote d'Ivoire,0.443,0.47
+CIV,2007,Cote d'Ivoire,0.449,0.478
+CIV,2008,Cote d'Ivoire,0.455,0.487
+CIV,2009,Cote d'Ivoire,0.462,0.497
+CIV,2010,Cote d'Ivoire,0.468,0.507
+CIV,2011,Cote d'Ivoire,0.472,0.517
+CIV,2012,Cote d'Ivoire,0.482,0.527
+CIV,2013,Cote d'Ivoire,0.49,0.537
+CIV,2014,Cote d'Ivoire,0.492,0.546
+CIV,2015,Cote d'Ivoire,0.503,0.555
+CIV,2016,Cote d'Ivoire,0.513,0.563
+CIV,2017,Cote d'Ivoire,0.525,0.569
+CIV,2018,Cote d'Ivoire,0.534,0.576
+CIV,2019,Cote d'Ivoire,0.538,0.581
+
+CMR,1990,Cameroon,0.448,0.513
+CMR,1991,Cameroon,0.445,0.509
+CMR,1992,Cameroon,0.441,0.504
+CMR,1993,Cameroon,0.435,0.498
+CMR,1994,Cameroon,0.433,0.491
+CMR,1995,Cameroon,0.432,0.485
+CMR,1996,Cameroon,0.431,0.481
+CMR,1997,Cameroon,0.432,0.477
+CMR,1998,Cameroon,0.434,0.475
+CMR,1999,Cameroon,0.436,0.475
+CMR,2000,Cameroon,0.44,0.477
+CMR,2001,Cameroon,0.456,0.48
+CMR,2002,Cameroon,0.458,0.485
+CMR,2003,Cameroon,0.464,0.491
+CMR,2004,Cameroon,0.469,0.497
+CMR,2005,Cameroon,0.47,0.504
+CMR,2006,Cameroon,0.471,0.511
+CMR,2007,Cameroon,0.482,0.518
+CMR,2008,Cameroon,0.49,0.525
+CMR,2009,Cameroon,0.498,0.533
+CMR,2010,Cameroon,0.505,0.54
+CMR,2011,Cameroon,0.514,0.547
+CMR,2012,Cameroon,0.525,0.555
+CMR,2013,Cameroon,0.534,0.563
+CMR,2014,Cameroon,0.54,0.571
+CMR,2015,Cameroon,0.549,0.578
+CMR,2016,Cameroon,0.553,0.586
+CMR,2017,Cameroon,0.557,0.592
+CMR,2018,Cameroon,0.56,0.599
+CMR,2019,Cameroon,0.563,0.604
+
+COD,1990,Congo (Democratic Republic of the),0.369,0.447
+COD,1991,Congo (Democratic Republic of the),0.366,0.45
+COD,1992,Congo (Democratic Republic of the),0.361,0.451
+COD,1993,Congo (Democratic Republic of the),0.355,0.451
+COD,1994,Congo (Democratic Republic of the),0.349,0.45
+COD,1995,Congo (Democratic Republic of the),0.347,0.448
+COD,1996,Congo (Democratic Republic of the),0.351,0.447
+COD,1997,Congo (Democratic Republic of the),0.349,0.447
+COD,1998,Congo (Democratic Republic of the),0.349,0.45
+COD,1999,Congo (Democratic Republic of the),0.347,0.455
+COD,2000,Congo (Democratic Republic of the),0.349,0.462
+COD,2001,Congo (Democratic Republic of the),0.35,0.472
+COD,2002,Congo (Democratic Republic of the),0.358,0.483
+COD,2003,Congo (Democratic Republic of the),0.366,0.495
+COD,2004,Congo (Democratic Republic of the),0.374,0.506
+COD,2005,Congo (Democratic Republic of the),0.381,0.518
+COD,2006,Congo (Democratic Republic of the),0.389,0.529
+COD,2007,Congo (Democratic Republic of the),0.4,0.54
+COD,2008,Congo (Democratic Republic of the),0.412,0.55
+COD,2009,Congo (Democratic Republic of the),0.419,0.559
+COD,2010,Congo (Democratic Republic of the),0.435,0.568
+COD,2011,Congo (Democratic Republic of the),0.438,0.576
+COD,2012,Congo (Democratic Republic of the),0.442,0.583
+COD,2013,Congo (Democratic Republic of the),0.448,0.59
+COD,2014,Congo (Democratic Republic of the),0.46,0.597
+COD,2015,Congo (Democratic Republic of the),0.464,0.604
+COD,2016,Congo (Democratic Republic of the),0.471,0.61
+COD,2017,Congo (Democratic Republic of the),0.475,0.616
+COD,2018,Congo (Democratic Republic of the),0.478,0.621
+COD,2019,Congo (Democratic Republic of the),0.48,0.62
+
+COG,1990,Congo,0.5,0.533
+COG,1991,Congo,0.499,0.527
+COG,1992,Congo,0.499,0.521
+COG,1993,Congo,0.493,0.514
+COG,1994,Congo,0.489,0.507
+COG,1995,Congo,0.471,0.501
+COG,1996,Congo,0.47,0.496
+COG,1997,Congo,0.474,0.493
+COG,1998,Congo,0.48,0.491
+COG,1999,Congo,0.467,0.491
+COG,2000,Congo,0.461,0.494
+COG,2001,Congo,0.468,0.5
+COG,2002,Congo,0.471,0.509
+COG,2003,Congo,0.471,0.52
+COG,2004,Congo,0.473,0.533
+COG,2005,Congo,0.469,0.548
+COG,2006,Congo,0.47,0.563
+COG,2007,Congo,0.486,0.578
+COG,2008,Congo,0.501,0.592
+COG,2009,Congo,0.514,0.605
+COG,2010,Congo,0.52,0.617
+COG,2011,Congo,0.522,0.627
+COG,2012,Congo,0.535,0.637
+COG,2013,Congo,0.545,0.646
+COG,2014,Congo,0.56,0.655
+COG,2015,Congo,0.58,0.663
+COG,2016,Congo,0.578,0.67
+COG,2017,Congo,0.574,0.676
+COG,2018,Congo,0.573,0.681
+COG,2019,Congo,0.57,0.68
+
+COL,1990,Colombia,0.603,0.765
+COL,1991,Colombia,0.606,0.768
+COL,1992,Colombia,0.617,0.772
+COL,1993,Colombia,0.624,0.776
+COL,1994,Colombia,0.631,0.781
+COL,1995,Colombia,0.637,0.786
+COL,1996,Colombia,0.647,0.792
+COL,1997,Colombia,0.655,0.798
+COL,1998,Colombia,0.662,0.804
+COL,1999,Colombia,0.662,0.81
+COL,2000,Colombia,0.666,0.815
+COL,2001,Colombia,0.668,0.819
+COL,2002,Colombia,0.671,0.823
+COL,2003,Colombia,0.67,0.827
+COL,2004,Colombia,0.684,0.831
+COL,2005,Colombia,0.689,0.835
+COL,2006,Colombia,0.698,0.838
+COL,2007,Colombia,0.711,0.842
+COL,2008,Colombia,0.718,0.846
+COL,2009,Colombia,0.72,0.849
+COL,2010,Colombia,0.729,0.853
+COL,2011,Colombia,0.734,0.856
+COL,2012,Colombia,0.739,0.86
+COL,2013,Colombia,0.742,0.863
+COL,2014,Colombia,0.753,0.866
+COL,2015,Colombia,0.756,0.87
+COL,2016,Colombia,0.76,0.873
+COL,2017,Colombia,0.763,0.876
+COL,2018,Colombia,0.764,0.879
+COL,2019,Colombia,0.76,0.88
+
+COM,1990,Comoros,NONE,0.564
+COM,1991,Comoros,NONE,0.572
+COM,1992,Comoros,NONE,0.579
+COM,1993,Comoros,NONE,0.585
+COM,1994,Comoros,NONE,0.591
+COM,1995,Comoros,NONE,0.596
+COM,1996,Comoros,NONE,0.6
+COM,1997,Comoros,NONE,0.602
+COM,1998,Comoros,NONE,0.605
+COM,1999,Comoros,NONE,0.606
+COM,2000,Comoros,0.465,0.607
+COM,2001,Comoros,0.47,0.608
+COM,2002,Comoros,0.475,0.609
+COM,2003,Comoros,0.481,0.611
+COM,2004,Comoros,0.483,0.614
+COM,2005,Comoros,0.489,0.617
+COM,2006,Comoros,0.495,0.622
+COM,2007,Comoros,0.501,0.627
+COM,2008,Comoros,0.508,0.632
+COM,2009,Comoros,0.514,0.638
+COM,2010,Comoros,0.521,0.644
+COM,2011,Comoros,0.533,0.65
+COM,2012,Comoros,0.538,0.655
+COM,2013,Comoros,0.542,0.66
+COM,2014,Comoros,0.543,0.665
+COM,2015,Comoros,0.545,0.669
+COM,2016,Comoros,0.547,0.672
+COM,2017,Comoros,0.55,0.676
+COM,2018,Comoros,0.552,0.679
+COM,2019,Comoros,0.55,0.68
+
+CPV,1990,Cabo Verde,NONE,0.687
+CPV,1991,Cabo Verde,NONE,0.692
+CPV,1992,Cabo Verde,NONE,0.697
+CPV,1993,Cabo Verde,NONE,0.702
+CPV,1994,Cabo Verde,NONE,0.706
+CPV,1995,Cabo Verde,NONE,0.711
+CPV,1996,Cabo Verde,NONE,0.717
+CPV,1997,Cabo Verde,NONE,0.723
+CPV,1998,Cabo Verde,NONE,0.731
+CPV,1999,Cabo Verde,NONE,0.739
+CPV,2000,Cabo Verde,0.569,0.747
+CPV,2001,Cabo Verde,0.573,0.755
+CPV,2002,Cabo Verde,0.583,0.762
+CPV,2003,Cabo Verde,0.588,0.768
+CPV,2004,Cabo Verde,0.59,0.773
+CPV,2005,Cabo Verde,0.596,0.776
+CPV,2006,Cabo Verde,0.611,0.778
+CPV,2007,Cabo Verde,0.617,0.78
+CPV,2008,Cabo Verde,0.625,0.781
+CPV,2009,Cabo Verde,0.63,0.783
+CPV,2010,Cabo Verde,0.632,0.786
+CPV,2011,Cabo Verde,0.639,0.788
+CPV,2012,Cabo Verde,0.644,0.791
+CPV,2013,Cabo Verde,0.647,0.795
+CPV,2014,Cabo Verde,0.654,0.798
+CPV,2015,Cabo Verde,0.656,0.802
+CPV,2016,Cabo Verde,0.657,0.805
+CPV,2017,Cabo Verde,0.66,0.809
+CPV,2018,Cabo Verde,0.663,0.812
+CPV,2019,Cabo Verde,0.66,0.81
+
+CRI,1990,Costa Rica,0.665,0.856
+CRI,1991,Costa Rica,0.672,0.859
+CRI,1992,Costa Rica,0.68,0.862
+CRI,1993,Costa Rica,0.687,0.865
+CRI,1994,Costa Rica,0.692,0.868
+CRI,1995,Costa Rica,0.697,0.87
+CRI,1996,Costa Rica,0.701,0.873
+CRI,1997,Costa Rica,0.707,0.876
+CRI,1998,Costa Rica,0.713,0.879
+CRI,1999,Costa Rica,0.717,0.881
+CRI,2000,Costa Rica,0.721,0.884
+CRI,2001,Costa Rica,0.725,0.886
+CRI,2002,Costa Rica,0.728,0.888
+CRI,2003,Costa Rica,0.731,0.89
+CRI,2004,Costa Rica,0.735,0.892
+CRI,2005,Costa Rica,0.738,0.894
+CRI,2006,Costa Rica,0.745,0.896
+CRI,2007,Costa Rica,0.753,0.898
+CRI,2008,Costa Rica,0.761,0.9
+CRI,2009,Costa Rica,0.762,0.902
+CRI,2010,Costa Rica,0.765,0.904
+CRI,2011,Costa Rica,0.778,0.906
+CRI,2012,Costa Rica,0.783,0.909
+CRI,2013,Costa Rica,0.788,0.911
+CRI,2014,Costa Rica,0.796,0.914
+CRI,2015,Costa Rica,0.797,0.916
+CRI,2016,Costa Rica,0.801,0.919
+CRI,2017,Costa Rica,0.804,0.922
+CRI,2018,Costa Rica,0.808,0.925
+CRI,2019,Costa Rica,0.81,0.92
+
+CUB,1990,Cuba,0.68,0.841
+CUB,1991,Cuba,0.674,0.841
+CUB,1992,Cuba,0.667,0.843
+CUB,1993,Cuba,0.66,0.845
+CUB,1994,Cuba,0.656,0.849
+CUB,1995,Cuba,0.659,0.852
+CUB,1996,Cuba,0.669,0.857
+CUB,1997,Cuba,0.673,0.861
+CUB,1998,Cuba,0.677,0.865
+CUB,1999,Cuba,0.684,0.869
+CUB,2000,Cuba,0.691,0.872
+CUB,2001,Cuba,0.696,0.875
+CUB,2002,Cuba,0.698,0.879
+CUB,2003,Cuba,0.708,0.882
+CUB,2004,Cuba,0.722,0.885
+CUB,2005,Cuba,0.734,0.888
+CUB,2006,Cuba,0.756,0.89
+CUB,2007,Cuba,0.772,0.893
+CUB,2008,Cuba,0.783,0.895
+CUB,2009,Cuba,0.785,0.896
+CUB,2010,Cuba,0.781,0.898
+CUB,2011,Cuba,0.78,0.898
+CUB,2012,Cuba,0.769,0.899
+CUB,2013,Cuba,0.766,0.9
+CUB,2014,Cuba,0.767,0.9
+CUB,2015,Cuba,0.772,0.901
+CUB,2016,Cuba,0.773,0.902
+CUB,2017,Cuba,0.777,0.902
+CUB,2018,Cuba,0.781,0.903
+CUB,2019,Cuba,0.78,0.90
+
+CYP,1990,Cyprus,0.735,0.87
+CYP,1991,Cyprus,0.738,0.872
+CYP,1992,Cyprus,0.742,0.875
+CYP,1993,Cyprus,0.779,0.877
+CYP,1994,Cyprus,0.784,0.879
+CYP,1995,Cyprus,0.788,0.882
+CYP,1996,Cyprus,0.791,0.884
+CYP,1997,Cyprus,0.794,0.886
+CYP,1998,Cyprus,0.803,0.888
+CYP,1999,Cyprus,0.802,0.89
+CYP,2000,Cyprus,0.804,0.892
+CYP,2001,Cyprus,0.81,0.894
+CYP,2002,Cyprus,0.819,0.896
+CYP,2003,Cyprus,0.828,0.898
+CYP,2004,Cyprus,0.831,0.9
+CYP,2005,Cyprus,0.836,0.902
+CYP,2006,Cyprus,0.842,0.904
+CYP,2007,Cyprus,0.849,0.906
+CYP,2008,Cyprus,0.858,0.909
+CYP,2009,Cyprus,0.862,0.911
+CYP,2010,Cyprus,0.856,0.914
+CYP,2011,Cyprus,0.86,0.917
+CYP,2012,Cyprus,0.859,0.92
+CYP,2013,Cyprus,0.86,0.923
+CYP,2014,Cyprus,0.862,0.926
+CYP,2015,Cyprus,0.865,0.928
+CYP,2016,Cyprus,0.873,0.931
+CYP,2017,Cyprus,0.878,0.933
+CYP,2018,Cyprus,0.885,0.936
+CYP,2019,Cyprus,0.88,0.93
+
+CZE,1990,Czechia,0.738,0.798
+CZE,1991,Czechia,0.733,0.802
+CZE,1992,Czechia,0.736,0.806
+CZE,1993,Czechia,0.743,0.81
+CZE,1994,Czechia,0.752,0.815
+CZE,1995,Czechia,0.761,0.821
+CZE,1996,Czechia,0.776,0.826
+CZE,1997,Czechia,0.782,0.831
+CZE,1998,Czechia,0.783,0.836
+CZE,1999,Czechia,0.793,0.84
+CZE,2000,Czechia,0.804,0.845
+CZE,2001,Czechia,0.814,0.849
+CZE,2002,Czechia,0.821,0.853
+CZE,2003,Czechia,0.83,0.857
+CZE,2004,Czechia,0.834,0.861
+CZE,2005,Czechia,0.843,0.866
+CZE,2006,Czechia,0.852,0.87
+CZE,2007,Czechia,0.858,0.874
+CZE,2008,Czechia,0.863,0.879
+CZE,2009,Czechia,0.866,0.883
+CZE,2010,Czechia,0.87,0.886
+CZE,2011,Czechia,0.874,0.89
+CZE,2012,Czechia,0.874,0.893
+CZE,2013,Czechia,0.882,0.897
+CZE,2014,Czechia,0.888,0.9
+CZE,2015,Czechia,0.891,0.903
+CZE,2016,Czechia,0.893,0.906
+CZE,2017,Czechia,0.896,0.909
+CZE,2018,Czechia,0.898,0.911
+CZE,2019,Czechia,0.9,0.9
+
+DEU,1990,Germany,0.808,0.854
+DEU,1991,Germany,0.816,0.857
+DEU,1992,Germany,0.821,0.86
+DEU,1993,Germany,0.831,0.864
+DEU,1994,Germany,0.837,0.867
+DEU,1995,Germany,0.842,0.871
+DEU,1996,Germany,0.846,0.875
+DEU,1997,Germany,0.851,0.879
+DEU,1998,Germany,0.86,0.884
+DEU,1999,Germany,0.868,0.888
+DEU,2000,Germany,0.876,0.892
+DEU,2001,Germany,0.884,0.896
+DEU,2002,Germany,0.89,0.9
+DEU,2003,Germany,0.896,0.904
+DEU,2004,Germany,0.907,0.908
+DEU,2005,Germany,0.908,0.911
+DEU,2006,Germany,0.918,0.914
+DEU,2007,Germany,0.921,0.917
+DEU,2008,Germany,0.924,0.92
+DEU,2009,Germany,0.924,0.923
+DEU,2010,Germany,0.927,0.925
+DEU,2011,Germany,0.933,0.927
+DEU,2012,Germany,0.934,0.929
+DEU,2013,Germany,0.935,0.931
+DEU,2014,Germany,0.937,0.933
+DEU,2015,Germany,0.938,0.935
+DEU,2016,Germany,0.941,0.937
+DEU,2017,Germany,0.943,0.939
+DEU,2018,Germany,0.946,0.941
+DEU,2019,Germany,0.9,0.944
+
+DJI,1990,Djibouti,NONE,0.564
+DJI,1991,Djibouti,NONE,0.567
+DJI,1992,Djibouti,NONE,0.568
+DJI,1993,Djibouti,NONE,0.569
+DJI,1994,Djibouti,NONE,0.57
+DJI,1995,Djibouti,0.351,0.57
+DJI,1996,Djibouti,0.349,0.57
+DJI,1997,Djibouti,0.354,0.57
+DJI,1998,Djibouti,0.355,0.569
+DJI,1999,Djibouti,0.359,0.569
+DJI,2000,Djibouti,0.36,0.57
+DJI,2001,Djibouti,0.369,0.571
+DJI,2002,Djibouti,0.375,0.573
+DJI,2003,Djibouti,0.385,0.576
+DJI,2004,Djibouti,0.393,0.58
+DJI,2005,Djibouti,0.402,0.584
+DJI,2006,Djibouti,0.413,0.59
+DJI,2007,Djibouti,0.423,0.596
+DJI,2008,Djibouti,0.432,0.602
+DJI,2009,Djibouti,0.442,0.609
+DJI,2010,Djibouti,0.454,0.616
+DJI,2011,Djibouti,0.463,0.626
+DJI,2012,Djibouti,0.474,0.637
+DJI,2013,Djibouti,0.484,0.65
+DJI,2014,Djibouti,0.492,0.664
+DJI,2015,Djibouti,0.499,0.679
+DJI,2016,Djibouti,0.505,0.693
+DJI,2017,Djibouti,0.51,0.706
+DJI,2018,Djibouti,0.518,0.717
+DJI,2019,Djibouti,0.524,0.725
+
+DMA,1990,Dominica,NONE,0.856
+DMA,1991,Dominica,NONE,0.86
+DMA,1992,Dominica,NONE,0.863
+DMA,1993,Dominica,NONE,0.865
+DMA,1994,Dominica,NONE,0.866
+DMA,1995,Dominica,NONE,0.866
+DMA,1996,Dominica,NONE,0.866
+DMA,1997,Dominica,NONE,0.866
+DMA,1998,Dominica,NONE,0.867
+DMA,1999,Dominica,NONE,0.868
+DMA,2000,Dominica,0.703,0.869
+DMA,2001,Dominica,0.707,0.87
+DMA,2002,Dominica,0.707,0.872
+DMA,2003,Dominica,0.712,0.873
+DMA,2004,Dominica,0.714,0.875
+DMA,2005,Dominica,0.715,0.876
+DMA,2006,Dominica,0.721,0.877
+DMA,2007,Dominica,0.725,0.879
+DMA,2008,Dominica,0.73,0.88
+DMA,2009,Dominica,0.731,0.881
+DMA,2010,Dominica,0.74,0.883
+DMA,2011,Dominica,0.741,0.884
+DMA,2012,Dominica,0.739,0.886
+DMA,2013,Dominica,0.739,0.887
+DMA,2014,Dominica,0.741,0.889
+DMA,2015,Dominica,0.739,0.89
+DMA,2016,Dominica,0.74,0.891
+DMA,2017,Dominica,0.736,0.893
+DMA,2018,Dominica,0.738,0.894
+DMA,2019,Dominica,0.742,0.896
+
+DNK,1990,Denmark,0.806,0.845
+DNK,1991,Denmark,0.811,0.847
+DNK,1992,Denmark,0.815,0.849
+DNK,1993,Denmark,0.822,0.851
+DNK,1994,Denmark,0.831,0.853
+DNK,1995,Denmark,0.837,0.856
+DNK,1996,Denmark,0.844,0.859
+DNK,1997,Denmark,0.85,0.862
+DNK,1998,Denmark,0.856,0.865
+DNK,1999,Denmark,0.868,0.869
+DNK,2000,Denmark,0.87,0.872
+DNK,2001,Denmark,0.883,0.876
+DNK,2002,Denmark,0.89,0.88
+DNK,2003,Denmark,0.901,0.884
+DNK,2004,Denmark,0.905,0.887
+DNK,2005,Denmark,0.91,0.891
+DNK,2006,Denmark,0.912,0.895
+DNK,2007,Denmark,0.911,0.9
+DNK,2008,Denmark,0.917,0.905
+DNK,2009,Denmark,0.914,0.909
+DNK,2010,Denmark,0.917,0.914
+DNK,2011,Denmark,0.93,0.919
+DNK,2012,Denmark,0.931,0.922
+DNK,2013,Denmark,0.933,0.926
+DNK,2014,Denmark,0.935,0.928
+DNK,2015,Denmark,0.933,0.93
+DNK,2016,Denmark,0.935,0.932
+DNK,2017,Denmark,0.936,0.934
+DNK,2018,Denmark,0.939,0.935
+DNK,2019,Denmark,0.94,0.937
+
+DOM,1990,Dominican Republic,0.599,0.717
+DOM,1991,Dominican Republic,0.603,0.722
+DOM,1992,Dominican Republic,0.612,0.727
+DOM,1993,Dominican Republic,0.619,0.732
+DOM,1994,Dominican Republic,0.624,0.737
+DOM,1995,Dominican Republic,0.63,0.741
+DOM,1996,Dominican Republic,0.636,0.745
+DOM,1997,Dominican Republic,0.643,0.749
+DOM,1998,Dominican Republic,0.648,0.753
+DOM,1999,Dominican Republic,0.654,0.757
+DOM,2000,Dominican Republic,0.659,0.76
+DOM,2001,Dominican Republic,0.663,0.764
+DOM,2002,Dominican Republic,0.668,0.769
+DOM,2003,Dominican Republic,0.669,0.773
+DOM,2004,Dominican Republic,0.672,0.777
+DOM,2005,Dominican Republic,0.681,0.781
+DOM,2006,Dominican Republic,0.688,0.785
+DOM,2007,Dominican Republic,0.694,0.789
+DOM,2008,Dominican Republic,0.698,0.793
+DOM,2009,Dominican Republic,0.7,0.797
+DOM,2010,Dominican Republic,0.706,0.801
+DOM,2011,Dominican Republic,0.71,0.804
+DOM,2012,Dominican Republic,0.714,0.808
+DOM,2013,Dominican Republic,0.718,0.812
+DOM,2014,Dominican Republic,0.73,0.815
+DOM,2015,Dominican Republic,0.738,0.819
+DOM,2016,Dominican Republic,0.743,0.823
+DOM,2017,Dominican Republic,0.746,0.826
+DOM,2018,Dominican Republic,0.751,0.829
+DOM,2019,Dominican Republic,0.756,0.832
+
