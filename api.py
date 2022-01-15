@@ -15,47 +15,49 @@ import json
 app = dash.Dash(__name__)
 
 
-# # --------------------------------------------------------------------------------------------------------- #
-response = requests.get('http://ec2-54-174-131-205.compute-1.amazonaws.com/API/HDRO_API.php/indicator_id=103206')
+# --------------------------------------------------------------------------------------------------------- #
+# response = requests.get('http://ec2-54-174-131-205.compute-1.amazonaws.com/API/HDRO_API.php/indicator_id=103206')
 
-# List of countries
-api = response.json()
-df = pd.DataFrame(api)
+# # List of countries
+# api = response.json()
+# df = pd.DataFrame(api)
 # print(df["country_name"].values)
 
 
 
-# # --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------------------------------------- #
 # # App layout
 
 
-
+df7 = pd.read_csv('csv_files/hdi_clean')
 df = pd.read_csv('csv_files/hdi.csv')
 df1 = pd.read_csv('csv_files/life_expectancy_index.csv')
+# df7 = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminderDataFiveYear.csv')
 
-df_year = df[['1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019']]
 
-# print(df_year)
+# df_year = df[['1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019']]
+
+
 
 # HDI 2019
-fig = px.scatter(df, x="Country_code", y="2019",
-                 size="2019", color="Country_name", hover_name="Country_name",
-                 size_max=10)
+# fig = px.scatter(df, x="Country_code", y="2019",
+#                  size="2019", color="Country_name", hover_name="Country_name",
+#                  size_max=10)
 
-# Life expectancy 2018
-fig1 = px.scatter(df1, x="Country_code", y="2018",
-                 size="2018", color="Country_name", hover_name="Country_name",
-                 size_max=10)
+# # Life expectancy 2018
+# fig1 = px.scatter(df1, x="Country_code", y="2018",
+#                  size="2018", color="Country_name", hover_name="Country_name",
+#                  size_max=10)
 
-# HDI bar chart 2019
-fig2 = px.bar(df, x = 'Country_code', y = '2019', 
-                color="Country_name", hover_name="Country_name")
+# # HDI bar chart 2019
+# fig2 = px.bar(df, x = 'Country_code', y = '2019', 
+#                 color="Country_name", hover_name="Country_name")
 
-# Life expectancy 2019
-fig3 = px.scatter(df1, x = 'Country_code', y = '2019', hover_name="Country_name")
+# # Life expectancy 2019
+# fig3 = px.scatter(df1, x = 'Country_code', y = '2019', hover_name="Country_name")
 
-# Life Expectancy 2019 Line Graph
-fig4 = px.line(df1, x = 'Country_code', y = '2019', title='Line Graph', hover_name="Country_name")
+# # Life Expectancy 2019 Line Graph
+# fig4 = px.line(df1, x = 'Country_code', y = '2019', title='Line Graph', hover_name="Country_name")
 
 # fig5 = px.strip(df1, x='Country_code', y='2019')
 
@@ -68,6 +70,22 @@ external_stylesheets = [
     },
 ]
 
+
+
+
+
+
+
+
+# --------------------------------------------------------------------------------------------------------- #
+
+
+
+
+
+
+
+
 app.layout = html.Div(children=[
 
 
@@ -75,6 +93,7 @@ app.layout = html.Div(children=[
         html.H1(children="Visualising the Human Developemnt Report", className='header-title', style={'fontSize': '48px', 'text-align': 'center'}),
         html.P(children="This is a visual representation on the United Nations Human Developemtn Report from 1990 to present day.", className='header-description'),
 
+    html.H3("Pick Country"),
     dcc.Dropdown(id='dropdown', value=[], multi=True,
     options=[{'label': x, 'value': x} for x in
             df.Country_name.unique()]),
@@ -85,12 +104,12 @@ app.layout = html.Div(children=[
 
     dcc.Graph(id='my-graph', figure={}, clickData=None, hoverData=None, # I assigned None for tutorial purposes. By defualt, these are None, unless you specify otherwise.
         config={
-            'staticPlot': False,     # True, False
-            'scrollZoom': True,      # True, False
+            'staticPlot': False,     # Zooming when dragging mouse and forming a box and also classical zooming
+            'scrollZoom': False,      # Classical zooming
             'doubleClick': 'reset',  # 'reset', 'autosize' or 'reset+autosize', False
-            'showTips': False,       # True, False
+            'showTips': False,     
             'displayModeBar': True,  # True, False, 'hover'
-            'watermark': True,
+            'watermark': False,
             # 'modeBarButtonsToRemove': ['pan2d','select2d'],
             },
         className='six columns'
@@ -98,99 +117,43 @@ app.layout = html.Div(children=[
     ]),
 
 
-
-
-
-
-
-    html.Div([
-    html.H1("HDI values for all countries in 2019", style={'text-align': 'center'}),
-    dcc.Graph(
-        id='country-vs-hdi',
-        figure=fig
+    dcc.Graph(id='graph-with-slider'),
+    dcc.Slider(
+        id='year-slider',
+        min=df7['year'].min(),
+        max=df7['year'].max(),
+        value=df7['year'].min(),
+        marks={str(year): str(year) for year in df7['year'].unique()},
+        step=None
     )
-]),
-    html.Div([
-        html.H1("HDI values for all countries in 2018", style={'text-align': 'center'}),
-        dcc.Graph(
-            id='country-vs-lifeexpactancy',
-            figure=fig1
-        )
-    ]),
-    html.Div([
-        html.H1("HDI bar chart for all countries in 2019", style={'text-align': 'center'}),
-        dcc.Graph(
-            id='hdi-barchart',
-            figure=fig2
-        )
-    ]),
-    html.Div([
-        html.H1("HDI + life expectancy 2019", style={'text-align': 'center'}),
-        dcc.Graph(
-            id='hdi-lifeexpectancy',
-            figure=fig3
-        ),
-        dcc.Graph(
-            id='hdi-lifeexpectancy1',
-            figure=fig
-        )
-    ]),
-    html.Div([
-        html.H1("Line Graph", style={'text-align': 'center'}),
-        dcc.Graph(
-            id='hdi-linegraph',
-            figure=fig4
-        )
-    ]),
-    # html.Div([
-    #     html.H1("Strip Plot", style={'text-align': 'center'}),
-    #     dcc.Graph(
-    #         id='hdi-stripplot',
-    #         figure=fig5
-    #     )
-    # ]),
 
-
-
-
-
-
-
-    html.Div([
-
-        html.Br(),
-        html.Label(['Choose 3 Cuisines to Compare:'],style={'font-weight': 'bold', "text-align": "center"}),
-        dcc.Dropdown(id='cuisine_one',
-            options=[{'label':x, 'value':x} for x in df.Country_name.unique()],
-            multi=False,
-            # value = [],
-            disabled=False,
-            clearable=True,
-            searchable=True,
-            placeholder='Choose Cuisine...',
-            className='form-dropdown',
-            style={'width':"90%"},
-            persistence='string',
-            persistence_type='memory'),
-
-        dcc.Dropdown(id='cuisine_two',
-            options=[{'label':x, 'value':x} for x in df1.Country_name.unique()],
-            multi=False,
-            # value = [],
-            clearable=False,
-            style={'width':"90%"},
-            persistence='string',
-            persistence_type='session'),
-
-    ],className='three columns'),
-
-    html.Div([
-        dcc.Graph(id='our_graph')
-    ],className='nine columns'),
 
 
 
 ])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# --------------------------------------------------------------------------------------------------------- #
+
+
+
+
+
+
+
+
 
 @app.callback(
 Output(component_id='my-graph', component_property='figure'),
@@ -211,29 +174,34 @@ def update_graph(country_chosen):
 
 
 
-
-
 @app.callback(
-    Output('our_graph','figure'),
-    [Input('cuisine_one','value'),
-     Input('cuisine_two','value')]
-)
+    Output('graph-with-slider', 'figure'),
+    Input('year-slider', 'value'))
+def update_figure(selected_year):
+    filtered_df = df7[df7.year == selected_year]
 
-def build_graph(first_cuisine, second_cuisine):
-    dff1=df[(df['Country_code']==first_cuisine)|
-           (df['Country_code']==second_cuisine)]
-    # print(dff[:5])
+    fig = px.scatter(filtered_df, x="gdpPercap", y="lifeExp",
+                     size="pop", color="continent", hover_name="country",
+                     log_x=True, size_max=55)
 
-    fig = px.line(dff1, x="2019", y="Country_code", color='Country_code')
-    fig.update_layout(yaxis={'title':'NEGATIVE POINT'},
-                      title={'text':'Restaurant Inspections in NYC',
-                      'font':{'size':28},'x':0.5,'xanchor':'center'})
+    fig.update_layout(transition_duration=500)
+
     return fig
 
 
 
 
+
+
+
+
+
+
 # --------------------------------------------------------------------------------------------------------- #
+
+
+
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
