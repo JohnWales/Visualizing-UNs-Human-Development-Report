@@ -1,0 +1,900 @@
+Country_code,year,Country_name,hdi_value,life_expectancy
+AFG,1990,Afghanistan,0.302,0.467
+AFG,1991,Afghanistan,0.307,0.477
+AFG,1992,Afghanistan,0.316,0.487
+AFG,1993,Afghanistan,0.312,0.496
+AFG,1994,Afghanistan,0.307,0.505
+AFG,1995,Afghanistan,0.331,0.514
+AFG,1996,Afghanistan,0.335,0.522
+AFG,1997,Afghanistan,0.339,0.53
+AFG,1998,Afghanistan,0.344,0.537
+AFG,1999,Afghanistan,0.348,0.544
+AFG,2000,Afghanistan,0.35,0.551
+AFG,2001,Afghanistan,0.353,0.559
+AFG,2002,Afghanistan,0.384,0.566
+AFG,2003,Afghanistan,0.393,0.573
+AFG,2004,Afghanistan,0.409,0.581
+AFG,2005,Afghanistan,0.418,0.589
+AFG,2006,Afghanistan,0.429,0.597
+AFG,2007,Afghanistan,0.447,0.606
+AFG,2008,Afghanistan,0.447,0.614
+AFG,2009,Afghanistan,0.46,0.623
+AFG,2010,Afghanistan,0.472,0.631
+AFG,2011,Afghanistan,0.477,0.639
+AFG,2012,Afghanistan,0.489,0.647
+AFG,2013,Afghanistan,0.496,0.654
+AFG,2014,Afghanistan,0.5,0.661
+AFG,2015,Afghanistan,0.5,0.667
+AFG,2016,Afghanistan,0.502,0.673
+AFG,2017,Afghanistan,0.506,0.679
+AFG,2018,Afghanistan,0.509,0.684
+AFG,2019,Afghanistan,0.511,0.69
+
+AGO,1990,Angola,NONE,0.389
+AGO,1991,Angola,NONE,0.389
+AGO,1992,Angola,NONE,0.388
+AGO,1993,Angola,NONE,0.388
+AGO,1994,Angola,NONE,0.388
+AGO,1995,Angola,NONE,0.388
+AGO,1996,Angola,NONE,0.39
+AGO,1997,Angola,NONE,0.393
+AGO,1998,Angola,NONE,0.396
+AGO,1999,Angola,0.391,0.401
+AGO,2000,Angola,0.4,0.408
+AGO,2001,Angola,0.41,0.416
+AGO,2002,Angola,0.426,0.426
+AGO,2003,Angola,0.435,0.438
+AGO,2004,Angola,0.446,0.45
+AGO,2005,Angola,0.46,0.464
+AGO,2006,Angola,0.473,0.479
+AGO,2007,Angola,0.489,0.495
+AGO,2008,Angola,0.501,0.511
+AGO,2009,Angola,0.515,0.528
+AGO,2010,Angola,0.517,0.544
+AGO,2011,Angola,0.533,0.559
+AGO,2012,Angola,0.544,0.573
+AGO,2013,Angola,0.555,0.585
+AGO,2014,Angola,0.565,0.597
+AGO,2015,Angola,0.572,0.606
+AGO,2016,Angola,0.578,0.614
+AGO,2017,Angola,0.582,0.621
+AGO,2018,Angola,0.582,0.627
+AGO,2019,Angola,0.581,0.633
+
+ALB,1990,Albania,0.65,0.797
+ALB,1991,Albania,0.631,0.797
+ALB,1992,Albania,0.615,0.797
+ALB,1993,Albania,0.618,0.798
+ALB,1994,Albania,0.624,0.8
+ALB,1995,Albania,0.637,0.803
+ALB,1996,Albania,0.646,0.808
+ALB,1997,Albania,0.645,0.813
+ALB,1998,Albania,0.655,0.819
+ALB,1999,Albania,0.665,0.824
+ALB,2000,Albania,0.671,0.83
+ALB,2001,Albania,0.678,0.835
+ALB,2002,Albania,0.684,0.84
+ALB,2003,Albania,0.691,0.844
+ALB,2004,Albania,0.696,0.847
+ALB,2005,Albania,0.706,0.85
+ALB,2006,Albania,0.713,0.853
+ALB,2007,Albania,0.722,0.856
+ALB,2008,Albania,0.728,0.86
+ALB,2009,Albania,0.733,0.865
+ALB,2010,Albania,0.745,0.87
+ALB,2011,Albania,0.764,0.876
+ALB,2012,Albania,0.775,0.881
+ALB,2013,Albania,0.782,0.885
+ALB,2014,Albania,0.787,0.889
+ALB,2015,Albania,0.788,0.893
+ALB,2016,Albania,0.788,0.895
+ALB,2017,Albania,0.79,0.897
+ALB,2018,Albania,0.792,0.899
+ALB,2019,Albania,0.795,0.901
+
+AND,1990,Andorra,NONE,0.869
+AND,1991,Andorra,NONE,0.872
+AND,1992,Andorra,NONE,0.875
+AND,1993,Andorra,NONE,0.877
+AND,1994,Andorra,NONE,0.88
+AND,1995,Andorra,NONE,0.883
+AND,1996,Andorra,NONE,0.887
+AND,1997,Andorra,NONE,0.891
+AND,1998,Andorra,NONE,0.895
+AND,1999,Andorra,NONE,0.9
+AND,2000,Andorra,0.813,0.906
+AND,2001,Andorra,0.815,0.911
+AND,2002,Andorra,0.82,0.915
+AND,2003,Andorra,0.827,0.92
+AND,2004,Andorra,0.833,0.923
+AND,2005,Andorra,0.827,0.926
+AND,2006,Andorra,0.837,0.928
+AND,2007,Andorra,0.837,0.93
+AND,2008,Andorra,0.84,0.932
+AND,2009,Andorra,0.839,0.934
+AND,2010,Andorra,0.837,0.936
+AND,2011,Andorra,0.836,0.937
+AND,2012,Andorra,0.858,0.939
+AND,2013,Andorra,0.856,0.941
+AND,2014,Andorra,0.863,0.943
+AND,2015,Andorra,0.862,0.945
+AND,2016,Andorra,0.866,0.947
+AND,2017,Andorra,0.863,0.949
+AND,2018,Andorra,0.867,0.951
+AND,2019,Andorra,0.868,0.952
+
+ARE,1990,United Arab Emirates,0.723,0.799
+ARE,1991,United Arab Emirates,0.735,0.803
+ARE,1992,United Arab Emirates,0.738,0.807
+ARE,1993,United Arab Emirates,0.745,0.811
+ARE,1994,United Arab Emirates,0.755,0.815
+ARE,1995,United Arab Emirates,0.764,0.818
+ARE,1996,United Arab Emirates,0.765,0.822
+ARE,1997,United Arab Emirates,0.766,0.825
+ARE,1998,United Arab Emirates,0.769,0.829
+ARE,1999,United Arab Emirates,0.776,0.832
+ARE,2000,United Arab Emirates,0.782,0.836
+ARE,2001,United Arab Emirates,0.787,0.839
+ARE,2002,United Arab Emirates,0.792,0.842
+ARE,2003,United Arab Emirates,0.798,0.846
+ARE,2004,United Arab Emirates,0.803,0.849
+ARE,2005,United Arab Emirates,0.809,0.852
+ARE,2006,United Arab Emirates,0.814,0.855
+ARE,2007,United Arab Emirates,0.819,0.858
+ARE,2008,United Arab Emirates,0.821,0.861
+ARE,2009,United Arab Emirates,0.819,0.864
+ARE,2010,United Arab Emirates,0.82,0.867
+ARE,2011,United Arab Emirates0.826,,0.87
+ARE,2012,United Arab Emirates,0.832,0.872
+ARE,2013,United Arab Emirates,0.838,0.875
+ARE,2014,United Arab Emirates,0.847,0.878
+ARE,2015,United Arab Emirates,0.859,0.881
+ARE,2016,United Arab Emirates,0.864,0.884
+ARE,2017,United Arab Emirates,0.881,0.887
+ARE,2018,United Arab Emirates,0.889,0.889
+ARE,2019,United Arab Emirates,0.89,0.892
+
+ARG,1990,Argentina,0.718,0.794
+ARG,1991,Argentina,0.725,0.797
+ARG,1992,Argentina,0.73,0.8
+ARG,1993,Argentina,0.735,0.804
+ARG,1994,Argentina,0.739,0.807
+ARG,1995,Argentina,0.741,0.81
+ARG,1996,Argentina,0.748,0.813
+ARG,1997,Argentina,0.757,0.816
+ARG,1998,Argentina,0.763,0.819
+ARG,1999,Argentina,0.774,0.821
+ARG,2000,Argentina,0.781,0.824
+ARG,2001,Argentina,0.786,0.827
+ARG,2002,Argentina,0.781,0.83
+ARG,2003,Argentina,0.786,0.832
+ARG,2004,Argentina,0.787,0.835
+ARG,2005,Argentina,0.788,0.838
+ARG,2006,Argentina,0.812,0.84
+ARG,2007,Argentina,0.817,0.843
+ARG,2008,Argentina,0.821,0.845
+ARG,2009,Argentina,0.821,0.848
+ARG,2010,Argentina,0.829,0.85
+ARG,2011,Argentina,0.835,0.853
+ARG,2012,Argentina,0.834,0.855
+ARG,2013,Argentina,0.835,0.858
+ARG,2014,Argentina,0.836,0.86
+ARG,2015,Argentina,0.84,0.863
+ARG,2016,Argentina,0.839,0.865
+ARG,2017,Argentina,0.843,0.867
+ARG,2018,Argentina,0.842,0.87
+ARG,2019,Argentina,0.845,0.872
+
+ARM,1990,Armenia,0.654,0.737
+ARM,1991,Armenia,0.648,0.736
+ARM,1992,Armenia,0.618,0.738
+ARM,1993,Armenia,0.617,0.742
+ARM,1994,Armenia,0.621,0.747
+ARM,1995,Armenia,0.627,0.753
+ARM,1996,Armenia,0.634,0.76
+ARM,1997,Armenia,0.645,0.768
+ARM,1998,Armenia,0.657,0.776
+ARM,1999,Armenia,0.664,0.784
+ARM,2000,Armenia,0.669,0.791
+ARM,2001,Armenia,0.673,0.797
+ARM,2002,Armenia,0.682,0.802
+ARM,2003,Armenia,0.691,0.805
+ARM,2004,Armenia,0.7,0.808
+ARM,2005,Armenia,0.712,0.81
+ARM,2006,Armenia,0.726,0.811
+ARM,2007,Armenia,0.741,0.813
+ARM,2008,Armenia,0.745,0.815
+ARM,2009,Armenia,0.742,0.817
+ARM,2010,Armenia,0.747,0.82
+ARM,2011,Armenia,0.751,0.824
+ARM,2012,Armenia,0.756,0.828
+ARM,2013,Armenia,0.762,0.832
+ARM,2014,Armenia,0.764,0.835
+ARM,2015,Armenia,0.768,0.838
+ARM,2016,Armenia,0.766,0.841
+ARM,2017,Armenia,0.769,0.843
+ARM,2018,Armenia,0.771,0.845
+ARM,2019,Armenia,0.776,0.848
+
+ATG,1990,Antigua and Barbuda,NONE,0.793
+ATG,1991,Antigua and Barbuda,NONE,0.796
+ATG,1992,Antigua and Barbuda,NONE,0.8
+ATG,1993,Antigua and Barbuda,NONE,0.804
+ATG,1994,Antigua and Barbuda,NONE,0.808
+ATG,1995,Antigua and Barbuda,NONE,0.811
+ATG,1996,Antigua and Barbuda,NONE,0.815
+ATG,1997,Antigua and Barbuda,NONE,0.819
+ATG,1998,Antigua and Barbuda,NONE,0.823
+ATG,1999,Antigua and Barbuda,NONE,0.826
+ATG,2000,Antigua and Barbuda,NONE,0.83
+ATG,2001,Antigua and Barbuda,NONE,0.833
+ATG,2002,Antigua and Barbuda,NONE,0.837
+ATG,2003,Antigua and Barbuda,NONE,0.84
+ATG,2004,Antigua and Barbuda,NONE,0.843
+ATG,2005,Antigua and Barbuda,0.764,0.846
+ATG,2006,Antigua and Barbuda,0.771,0.849
+ATG,2007,Antigua and Barbuda,0.776,0.852
+ATG,2008,Antigua and Barbuda,0.774,0.854
+ATG,2009,Antigua and Barbuda,0.767,0.857
+ATG,2010,Antigua and Barbuda,0.763,0.859
+ATG,2011,Antigua and Barbuda,0.755,0.861
+ATG,2012,Antigua and Barbuda,0.759,0.863
+ATG,2013,Antigua and Barbuda,0.76,0.865
+ATG,2014,Antigua and Barbuda,0.76,0.867
+ATG,2015,Antigua and Barbuda,0.762,0.869
+ATG,2016,Antigua and Barbuda,0.765,0.871
+ATG,2017,Antigua and Barbuda,0.768,0.873
+ATG,2018,Antigua and Barbuda,0.772,0.875
+ATG,2019,Antigua and Barbuda,0.778,0.877
+
+AUS,1990,Australia,0.871,0.876
+AUS,1991,Australia,0.871,0.88
+AUS,1992,Australia,0.873,0.885
+AUS,1993,Australia,0.876,0.889
+AUS,1994,Australia,0.879,0.893
+AUS,1995,Australia,0.888,0.896
+AUS,1996,Australia,0.89,0.9
+AUS,1997,Australia,0.893,0.904
+AUS,1998,Australia,0.896,0.908
+AUS,1999,Australia,0.9,0.912
+AUS,2000,Australia,0.903,0.917
+AUS,2001,Australia,0.905,0.921
+AUS,2002,Australia,0.907,0.926
+AUS,2003,Australia,0.909,0.93
+AUS,2004,Australia,0.911,0.934
+AUS,2005,Australia,0.906,0.938
+AUS,2006,Australia,0.909,0.941
+AUS,2007,Australia,0.912,0.944
+AUS,2008,Australia,0.926,0.947
+AUS,2009,Australia,0.928,0.95
+AUS,2010,Australia,0.93,0.953
+AUS,2011,Australia,0.932,0.956
+AUS,2012,Australia,0.937,0.958
+AUS,2013,Australia,0.931,0.961
+AUS,2014,Australia,0.933,0.963
+AUS,2015,Australia,0.938,0.966
+AUS,2016,Australia,0.939,0.969
+AUS,2017,Australia,0.941,0.971
+AUS,2018,Australia,0.943,0.974
+AUS,2019,Australia,0.944,0.976
+
+AUT,1990,Austria,0.803,0.855
+AUT,1991,Austria,0.808,0.859
+AUT,1992,Austria,0.813,0.863
+AUT,1993,Austria,0.817,0.866
+AUT,1994,Austria,0.821,0.87
+AUT,1995,Austria,0.825,0.874
+AUT,1996,Austria,0.829,0.878
+AUT,1997,Austria,0.832,0.883
+AUT,1998,Austria,0.837,0.887
+AUT,1999,Austria,0.842,0.892
+AUT,2000,Austria,0.847,0.896
+AUT,2001,Austria,0.857,0.9
+AUT,2002,Austria,0.847,0.904
+AUT,2003,Austria,0.851,0.909
+AUT,2004,Austria,0.858,0.913
+AUT,2005,Austria,0.863,0.916
+AUT,2006,Austria,0.87,0.92
+AUT,2007,Austria,0.89,0.924
+AUT,2008,Austria,0.893,0.927
+AUT,2009,Austria,0.895,0.93
+AUT,2010,Austria,0.904,0.933
+AUT,2011,Austria,0.906,0.935
+AUT,2012,Austria,0.908,0.937
+AUT,2013,Austria,0.905,0.939
+AUT,2014,Austria,0.913,0.94
+AUT,2015,Austria,0.915,0.941
+AUT,2016,Austria,0.917,0.942
+AUT,2017,Austria,0.919,0.944
+AUT,2018,Austria,0.921,0.945
+AUT,2019,Austria,0.922,0.947
+
+AZE,1990,Azerbaijan,NONE,0.69
+AZE,1991,Azerbaijan,NONE,0.688
+AZE,1992,Azerbaijan,NONE,0.688
+AZE,1993,Azerbaijan,NONE,0.689
+AZE,1994,Azerbaijan,NONE,0.692
+AZE,1995,Azerbaijan,0.604,0.696
+AZE,1996,Azerbaijan,0.605,0.701
+AZE,1997,Azerbaijan,0.61,0.706
+AZE,1998,Azerbaijan,0.619,0.711
+AZE,1999,Azerbaijan,0.629,0.715
+AZE,2000,Azerbaijan,0.635,0.719
+AZE,2001,Azerbaijan,0.643,0.724
+AZE,2002,Azerbaijan,0.651,0.729
+AZE,2003,Azerbaijan,0.659,0.735
+AZE,2004,Azerbaijan,0.667,0.742
+AZE,2005,Azerbaijan,0.674,0.75
+AZE,2006,Azerbaijan,0.701,0.758
+AZE,2007,Azerbaijan,0.706,0.765
+AZE,2008,Azerbaijan,0.716,0.772
+AZE,2009,Azerbaijan,0.727,0.778
+AZE,2010,Azerbaijan,0.726,0.784
+AZE,2011,Azerbaijan,0.727,0.788
+AZE,2012,Azerbaijan,0.73,0.792
+AZE,2013,Azerbaijan,0.735,0.796
+AZE,2014,Azerbaijan,0.74,0.8
+AZE,2015,Azerbaijan,0.744,0.804
+AZE,2016,Azerbaijan,0.751,0.808
+AZE,2017,Azerbaijan,0.754,0.811
+AZE,2018,Azerbaijan,0.754,0.813
+AZE,2019,Azerbaijan,0.756,0.816
+
+BDI,1990,Burundi,0.299,0.428
+BDI,1991,Burundi,0.302,0.423
+BDI,1992,Burundi,0.299,0.419
+BDI,1993,Burundi,0.299,0.415
+BDI,1994,Burundi,0.296,0.412
+BDI,1995,Burundi,0.292,0.412
+BDI,1996,Burundi,0.289,0.414
+BDI,1997,Burundi,0.29,0.419
+BDI,1998,Burundi,0.294,0.426
+BDI,1999,Burundi,0.295,0.436
+BDI,2000,Burundi,0.3,0.448
+BDI,2001,Burundi,0.301,0.46
+BDI,2002,Burundi,0.311,0.474
+BDI,2003,Burundi,0.319,0.488
+BDI,2004,Burundi,0.33,0.501
+BDI,2005,Burundi,0.337,0.513
+BDI,2006,Burundi,0.359,0.526
+BDI,2007,Burundi,0.371,0.538
+BDI,2008,Burundi,0.384,0.55
+BDI,2009,Burundi,0.401,0.561
+BDI,2010,Burundi,0.411,0.573
+BDI,2011,Burundi,0.419,0.583
+BDI,2012,Burundi,0.426,0.593
+BDI,2013,Burundi,0.432,0.602
+BDI,2014,Burundi,0.438,0.61
+BDI,2015,Burundi,0.437,0.617
+BDI,2016,Burundi,0.438,0.624
+BDI,2017,Burundi,0.434,0.629
+BDI,2018,Burundi,0.431,0.635
+BDI,2019,Burundi,0.433,0.64
+
+BEL,1990,Belgium,0.813,0.859
+BEL,1991,Belgium,0.817,0.863
+BEL,1992,Belgium,0.832,0.866
+BEL,1993,Belgium,0.845,0.869
+BEL,1994,Belgium,0.852,0.872
+BEL,1995,Belgium,0.859,0.875
+BEL,1996,Belgium,0.864,0.878
+BEL,1997,Belgium,0.869,0.881
+BEL,1998,Belgium,0.873,0.884
+BEL,1999,Belgium,0.875,0.887
+BEL,2000,Belgium,0.88,0.89
+BEL,2001,Belgium,0.883,0.893
+BEL,2002,Belgium,0.886,0.897
+BEL,2003,Belgium,0.889,0.9
+BEL,2004,Belgium,0.893,0.904
+BEL,2005,Belgium,0.897,0.907
+BEL,2006,Belgium,0.904,0.911
+BEL,2007,Belgium,0.907,0.914
+BEL,2008,Belgium,0.906,0.918
+BEL,2009,Belgium,0.907,0.921
+BEL,2010,Belgium,0.91,0.924
+BEL,2011,Belgium,0.911,0.927
+BEL,2012,Belgium,0.913,0.93
+BEL,2013,Belgium,0.916,0.933
+BEL,2014,Belgium,0.918,0.935
+BEL,2015,Belgium,0.922,0.938
+BEL,2016,Belgium,0.924,0.941
+BEL,2017,Belgium,0.929,0.943
+BEL,2018,Belgium,0.93,0.946
+BEL,2019,Belgium,0.93,0.94
+
+BEN,1990,Benin,0.364,0.52
+BEN,1991,Benin,0.371,0.529
+BEN,1992,Benin,0.375,0.535
+BEN,1993,Benin,0.382,0.539
+BEN,1994,Benin,0.386,0.541
+BEN,1995,Benin,0.391,0.542
+BEN,1996,Benin,0.394,0.541
+BEN,1997,Benin,0.399,0.541
+BEN,1998,Benin,0.403,0.541
+BEN,1999,Benin,0.409,0.542
+BEN,2000,Benin,0.416,0.544
+BEN,2001,Benin,0.428,0.549
+BEN,2002,Benin,0.438,0.554
+BEN,2003,Benin,0.445,0.561
+BEN,2004,Benin,0.453,0.567
+BEN,2005,Benin,0.459,0.575
+BEN,2006,Benin,0.467,0.582
+BEN,2007,Benin,0.475,0.589
+BEN,2008,Benin,0.482,0.595
+BEN,2009,Benin,0.488,0.6
+BEN,2010,Benin,0.494,0.605
+BEN,2011,Benin,0.5,0.609
+BEN,2012,Benin,0.51,0.613
+BEN,2013,Benin,0.522,0.617
+BEN,2014,Benin,0.527,0.621
+BEN,2015,Benin,0.532,0.625
+BEN,2016,Benin,0.533,0.629
+BEN,2017,Benin,0.536,0.633
+BEN,2018,Benin,0.541,0.638
+BEN,2019,Benin,0.54,0.64
+
+BFA,1990,Burkina Faso,NONE,0.453
+BFA,1991,Burkina Faso,NONE,0.452
+BFA,1992,Burkina Faso,NONE,0.452
+BFA,1993,Burkina Faso,NONE,0.452
+BFA,1994,Burkina Faso,NONE,0.452
+BFA,1995,Burkina Faso,NONE,0.453
+BFA,1996,Burkina Faso,NONE,0.455
+BFA,1997,Burkina Faso,NONE,0.457
+BFA,1998,Burkina Faso,NONE,0.46
+BFA,1999,Burkina Faso,NONE,0.464
+BFA,2000,Burkina Faso,0.293,0.469
+BFA,2001,Burkina Faso,0.298,0.475
+BFA,2002,Burkina Faso,0.303,0.483
+BFA,2003,Burkina Faso,0.31,0.492
+BFA,2004,Burkina Faso,0.32,0.502
+BFA,2005,Burkina Faso,0.332,0.512
+BFA,2006,Burkina Faso,0.341,0.524
+BFA,2007,Burkina Faso,0.352,0.536
+BFA,2008,Burkina Faso,0.364,0.548
+BFA,2009,Burkina Faso,0.373,0.56
+BFA,2010,Burkina Faso,0.384,0.571
+BFA,2011,Burkina Faso,0.394,0.581
+BFA,2012,Burkina Faso,0.403,0.59
+BFA,2013,Burkina Faso,0.41,0.599
+BFA,2014,Burkina Faso,0.413,0.607
+BFA,2015,Burkina Faso,0.422,0.614
+BFA,2016,Burkina Faso,0.428,0.621
+BFA,2017,Burkina Faso,0.439,0.627
+BFA,2018,Burkina Faso,0.443,0.633
+BFA,2019,Burkina Faso,0.45,0.64
+
+BGD,1990,Bangladesh,0.394,0.588
+BGD,1991,Bangladesh,0.401,0.598
+BGD,1992,Bangladesh,0.41,0.61
+BGD,1993,Bangladesh,0.418,0.621
+BGD,1994,Bangladesh,0.426,0.634
+BGD,1995,Bangladesh,0.434,0.646
+BGD,1996,Bangladesh,0.443,0.658
+BGD,1997,Bangladesh,0.452,0.67
+BGD,1998,Bangladesh,0.461,0.681
+BGD,1999,Bangladesh,0.469,0.69
+BGD,2000,Bangladesh,0.478,0.699
+BGD,2001,Bangladesh,0.486,0.707
+BGD,2002,Bangladesh,0.492,0.714
+BGD,2003,Bangladesh,0.499,0.721
+BGD,2004,Bangladesh,0.506,0.728
+BGD,2005,Bangladesh,0.514,0.735
+BGD,2006,Bangladesh,0.521,0.742
+BGD,2007,Bangladesh,0.528,0.748
+BGD,2008,Bangladesh,0.531,0.755
+BGD,2009,Bangladesh,0.543,0.761
+BGD,2010,Bangladesh,0.557,0.767
+BGD,2011,Bangladesh,0.566,0.773
+BGD,2012,Bangladesh,0.575,0.779
+BGD,2013,Bangladesh,0.579,0.784
+BGD,2014,Bangladesh,0.579,0.788
+BGD,2015,Bangladesh,0.595,0.793
+BGD,2016,Bangladesh,0.606,0.797
+BGD,2017,Bangladesh,0.616,0.801
+BGD,2018,Bangladesh,0.625,0.805
+BGD,2019,Bangladesh,0.63,0.80
+
+BGR,1990,Bulgaria,0.708,0.789
+BGR,1991,Bulgaria,0.705,0.788
+BGR,1992,Bulgaria,0.705,0.787
+BGR,1993,Bulgaria,0.704,0.785
+BGR,1994,Bulgaria,0.705,0.784
+BGR,1995,Bulgaria,0.71,0.784
+BGR,1996,Bulgaria,0.718,0.784
+BGR,1997,Bulgaria,0.713,0.785
+BGR,1998,Bulgaria,0.718,0.786
+BGR,1999,Bulgaria,0.716,0.789
+BGR,2000,Bulgaria,0.72,0.792
+BGR,2001,Bulgaria,0.73,0.796
+BGR,2002,Bulgaria,0.736,0.8
+BGR,2003,Bulgaria,0.745,0.804
+BGR,2004,Bulgaria,0.752,0.807
+BGR,2005,Bulgaria,0.758,0.81
+BGR,2006,Bulgaria,0.765,0.813
+BGR,2007,Bulgaria,0.773,0.817
+BGR,2008,Bulgaria,0.78,0.82
+BGR,2009,Bulgaria,0.782,0.823
+BGR,2010,Bulgaria,0.788,0.826
+BGR,2011,Bulgaria,0.791,0.83
+BGR,2012,Bulgaria,0.795,0.833
+BGR,2013,Bulgaria,0.801,0.835
+BGR,2014,Bulgaria,0.806,0.838
+BGR,2015,Bulgaria,0.809,0.84
+BGR,2016,Bulgaria,0.811,0.842
+BGR,2017,Bulgaria,0.811,0.843
+BGR,2018,Bulgaria,0.813,0.845
+BGR,2019,Bulgaria,0.81,0.84
+
+BHR,1990,Bahrain,0.749,0.806
+BHR,1991,Bahrain,0.755,0.809
+BHR,1992,Bahrain,0.76,0.812
+BHR,1993,Bahrain,0.769,0.815
+BHR,1994,Bahrain,0.772,0.819
+BHR,1995,Bahrain,0.778,0.822
+BHR,1996,Bahrain,0.782,0.825
+BHR,1997,Bahrain,0.783,0.828
+BHR,1998,Bahrain,0.787,0.831
+BHR,1999,Bahrain,0.789,0.834
+BHR,2000,Bahrain,0.795,0.838
+BHR,2001,Bahrain,0.796,0.841
+BHR,2002,Bahrain,0.795,0.843
+BHR,2003,Bahrain,0.797,0.846
+BHR,2004,Bahrain,0.796,0.849
+BHR,2005,Bahrain,0.795,0.851
+BHR,2006,Bahrain,0.797,0.854
+BHR,2007,Bahrain,0.799,0.856
+BHR,2008,Bahrain,0.8,0.858
+BHR,2009,Bahrain,0.798,0.86
+BHR,2010,Bahrain,0.8,0.862
+BHR,2011,Bahrain,0.801,0.865
+BHR,2012,Bahrain,0.808,0.867
+BHR,2013,Bahrain,0.815,0.869
+BHR,2014,Bahrain,0.82,0.871
+BHR,2015,Bahrain,0.848,0.873
+BHR,2016,Bahrain,0.853,0.875
+BHR,2017,Bahrain,0.854,0.877
+BHR,2018,Bahrain,0.852,0.879
+BHR,2019,Bahrain,0.85,0.88
+
+BHS,1990,Bahamas,NONE,0.772
+BHS,1991,Bahamas,NONE,0.777
+BHS,1992,Bahamas,NONE,0.782
+BHS,1993,Bahamas,NONE,0.786
+BHS,1994,Bahamas,NONE,0.789
+BHS,1995,Bahamas,NONE,0.792
+BHS,1996,Bahamas,NONE,0.794
+BHS,1997,Bahamas,NONE,0.795
+BHS,1998,Bahamas,NONE,0.797
+BHS,1999,Bahamas,NONE,0.798
+BHS,2000,Bahamas,0.797,0.799
+BHS,2001,Bahamas,0.798,0.799
+BHS,2002,Bahamas,0.8,0.8
+BHS,2003,Bahamas,0.799,0.8
+BHS,2004,Bahamas,0.8,0.8
+BHS,2005,Bahamas,0.801,0.8
+BHS,2006,Bahamas,0.804,0.8
+BHS,2007,Bahamas,0.804,0.8
+BHS,2008,Bahamas,0.804,0.8
+BHS,2009,Bahamas,0.803,0.801
+BHS,2010,Bahamas,0.805,0.802
+BHS,2011,Bahamas,0.805,0.804
+BHS,2012,Bahamas,0.807,0.807
+BHS,2013,Bahamas,0.806,0.81
+BHS,2014,Bahamas,0.805,0.813
+BHS,2015,Bahamas,0.808,0.817
+BHS,2016,Bahamas,0.81,0.82
+BHS,2017,Bahamas,0.812,0.824
+BHS,2018,Bahamas,0.812,0.827
+BHS,2019,Bahamas,0.81,0.83
+
+BIH,1990,Bosnia and Herzegovina,NONE,0.783
+BIH,1991,Bosnia and Herzegovina,NONE,0.779
+BIH,1992,Bosnia and Herzegovina,NONE,0.778
+BIH,1993,Bosnia and Herzegovina,NONE,0.78
+BIH,1994,Bosnia and Herzegovina,NONE,0.786
+BIH,1995,Bosnia and Herzegovina,NONE,0.795
+BIH,1996,Bosnia and Herzegovina,NONE,0.805
+BIH,1997,Bosnia and Herzegovina,NONE,0.815
+BIH,1998,Bosnia and Herzegovina,NONE,0.824
+BIH,1999,Bosnia and Herzegovina,NONE,0.832
+BIH,2000,Bosnia and Herzegovina,0.679,0.837
+BIH,2001,Bosnia and Herzegovina,0.684,0.841
+BIH,2002,Bosnia and Herzegovina,0.689,0.843
+BIH,2003,Bosnia and Herzegovina,0.695,0.845
+BIH,2004,Bosnia and Herzegovina,0.701,0.847
+BIH,2005,Bosnia and Herzegovina,0.706,0.849
+BIH,2006,Bosnia and Herzegovina,0.712,0.851
+BIH,2007,Bosnia and Herzegovina,0.719,0.854
+BIH,2008,Bosnia and Herzegovina,0.726,0.856
+BIH,2009,Bosnia and Herzegovina,0.727,0.859
+BIH,2010,Bosnia and Herzegovina,0.721,0.862
+BIH,2011,Bosnia and Herzegovina,0.729,0.865
+BIH,2012,Bosnia and Herzegovina,0.748,0.868
+BIH,2013,Bosnia and Herzegovina,0.755,0.87
+BIH,2014,Bosnia and Herzegovina,0.758,0.873
+BIH,2015,Bosnia and Herzegovina,0.761,0.875
+BIH,2016,Bosnia and Herzegovina,0.772,0.877
+BIH,2017,Bosnia and Herzegovina,0.774,0.879
+BIH,2018,Bosnia and Herzegovina,0.777,0.881
+BIH,2019,Bosnia and Herzegovina,0.78,0.88
+
+BLR,1990,Belarus,NONE,0.779
+BLR,1991,Belarus,NONE,0.773
+BLR,1992,Belarus,NONE,0.765
+BLR,1993,Belarus,NONE,0.757
+BLR,1994,Belarus,NONE,0.75
+BLR,1995,Belarus,0.66,0.743
+BLR,1996,Belarus,0.664,0.737
+BLR,1997,Belarus,0.67,0.733
+BLR,1998,Belarus,0.674,0.73
+BLR,1999,Belarus,0.679,0.728
+BLR,2000,Belarus,0.686,0.729
+BLR,2001,Belarus,0.692,0.73
+BLR,2002,Belarus,0.699,0.732
+BLR,2003,Belarus,0.707,0.736
+BLR,2004,Belarus,0.717,0.739
+BLR,2005,Belarus,0.727,0.743
+BLR,2006,Belarus,0.744,0.749
+BLR,2007,Belarus,0.76,0.755
+BLR,2008,Belarus,0.777,0.763
+BLR,2009,Belarus,0.787,0.772
+BLR,2010,Belarus,0.795,0.782
+BLR,2011,Belarus,0.801,0.791
+BLR,2012,Belarus,0.806,0.801
+BLR,2013,Belarus,0.811,0.81
+BLR,2014,Belarus,0.814,0.818
+BLR,2015,Belarus,0.814,0.825
+BLR,2016,Belarus,0.815,0.831
+BLR,2017,Belarus,0.819,0.836
+BLR,2018,Belarus,0.823,0.84
+BLR,2019,Belarus,0.82,0.84
+
+BLZ,1990,Belize,0.61,0.788
+BLZ,1991,Belize,0.614,0.785
+BLZ,1992,Belize,0.621,0.779
+BLZ,1993,Belize,0.624,0.773
+BLZ,1994,Belize,0.623,0.767
+BLZ,1995,Belize,0.624,0.761
+BLZ,1996,Belize,0.624,0.755
+BLZ,1997,Belize,0.626,0.752
+BLZ,1998,Belize,0.628,0.75
+BLZ,1999,Belize,0.633,0.75
+BLZ,2000,Belize,0.64,0.751
+BLZ,2001,Belize,0.644,0.754
+BLZ,2002,Belize,0.651,0.758
+BLZ,2003,Belize,0.659,0.762
+BLZ,2004,Belize,0.665,0.765
+BLZ,2005,Belize,0.662,0.769
+BLZ,2006,Belize,0.672,0.774
+BLZ,2007,Belize,0.674,0.779
+BLZ,2008,Belize,0.679,0.786
+BLZ,2009,Belize,0.684,0.793
+BLZ,2010,Belize,0.695,0.801
+BLZ,2011,Belize,0.694,0.809
+BLZ,2012,Belize,0.701,0.816
+BLZ,2013,Belize,0.702,0.822
+BLZ,2014,Belize,0.705,0.827
+BLZ,2015,Belize,0.71,0.831
+BLZ,2016,Belize,0.717,0.834
+BLZ,2017,Belize,0.714,0.836
+BLZ,2018,Belize,0.714,0.838
+BLZ,2019,Belize,0.71,0.84
+
+BOL,1990,Bolivia,0.551,0.555
+BOL,1991,Bolivia,0.559,0.565
+BOL,1992,Bolivia,0.566,0.575
+BOL,1993,Bolivia,0.573,0.584
+BOL,1994,Bolivia,0.581,0.594
+BOL,1995,Bolivia,0.589,0.604
+BOL,1996,Bolivia,0.595,0.614
+BOL,1997,Bolivia,0.598,0.624
+BOL,1998,Bolivia,0.61,0.634
+BOL,1999,Bolivia,0.619,0.644
+BOL,2000,Bolivia,0.627,0.653
+BOL,2001,Bolivia,0.63,0.662
+BOL,2002,Bolivia,0.637,0.671
+BOL,2003,Bolivia,0.64,0.68
+BOL,2004,Bolivia,0.641,0.689
+BOL,2005,Bolivia,0.643,0.697
+BOL,2006,Bolivia,0.649,0.705
+BOL,2007,Bolivia,0.649,0.714
+BOL,2008,Bolivia,0.658,0.722
+BOL,2009,Bolivia,0.663,0.73
+BOL,2010,Bolivia,0.667,0.739
+BOL,2011,Bolivia,0.671,0.746
+BOL,2012,Bolivia,0.675,0.754
+BOL,2013,Bolivia,0.684,0.761
+BOL,2014,Bolivia,0.69,0.768
+BOL,2015,Bolivia,0.697,0.773
+BOL,2016,Bolivia,0.702,0.779
+BOL,2017,Bolivia,0.71,0.784
+BOL,2018,Bolivia,0.714,0.788
+BOL,2019,Bolivia,0.71,0.79
+
+BRA,1990,Brazil,0.613,0.713
+BRA,1991,Brazil,0.621,0.719
+BRA,1992,Brazil,0.627,0.725
+BRA,1993,Brazil,0.635,0.731
+BRA,1994,Brazil,0.642,0.737
+BRA,1995,Brazil,0.651,0.743
+BRA,1996,Brazil,0.658,0.749
+BRA,1997,Brazil,0.665,0.755
+BRA,1998,Brazil,0.67,0.76
+BRA,1999,Brazil,0.676,0.766
+BRA,2000,Brazil,0.685,0.771
+BRA,2001,Brazil,0.691,0.776
+BRA,2002,Brazil,0.699,0.782
+BRA,2003,Brazil,0.695,0.787
+BRA,2004,Brazil,0.698,0.793
+BRA,2005,Brazil,0.7,0.798
+BRA,2006,Brazil,0.702,0.804
+BRA,2007,Brazil,0.706,0.81
+BRA,2008,Brazil,0.717,0.815
+BRA,2009,Brazil,0.719,0.82
+BRA,2010,Brazil,0.727,0.825
+BRA,2011,Brazil,0.731,0.83
+BRA,2012,Brazil,0.735,0.834
+BRA,2013,Brazil,0.753,0.838
+BRA,2014,Brazil,0.756,0.842
+BRA,2015,Brazil,0.756,0.846
+BRA,2016,Brazil,0.758,0.85
+BRA,2017,Brazil,0.761,0.853
+BRA,2018,Brazil,0.762,0.856
+BRA,2019,Brazil,0.76,0.86
+
+BRB,1990,Barbados,0.732,0.842
+BRB,1991,Barbados,0.733,0.844
+BRB,1992,Barbados,0.733,0.848
+BRB,1993,Barbados,0.737,0.851
+BRB,1994,Barbados,0.742,0.855
+BRB,1995,Barbados,0.747,0.859
+BRB,1996,Barbados,0.751,0.864
+BRB,1997,Barbados,0.757,0.868
+BRB,1998,Barbados,0.753,0.872
+BRB,1999,Barbados,0.76,0.876
+BRB,2000,Barbados,0.771,0.879
+BRB,2001,Barbados,0.77,0.882
+BRB,2002,Barbados,0.774,0.885
+BRB,2003,Barbados,0.778,0.887
+BRB,2004,Barbados,0.782,0.889
+BRB,2005,Barbados,0.787,0.891
+BRB,2006,Barbados,0.791,0.892
+BRB,2007,Barbados,0.796,0.894
+BRB,2008,Barbados,0.8,0.895
+BRB,2009,Barbados,0.8,0.896
+BRB,2010,Barbados,0.797,0.898
+BRB,2011,Barbados,0.799,0.899
+BRB,2012,Barbados,0.808,0.901
+BRB,2013,Barbados,0.807,0.902
+BRB,2014,Barbados,0.808,0.903
+BRB,2015,Barbados,0.809,0.905
+BRB,2016,Barbados,0.811,0.906
+BRB,2017,Barbados,0.81,0.907
+BRB,2018,Barbados,0.81,0.909
+BRB,2019,Barbados,0.81,0.91
+
+BRN,1990,Brunei Darussalam,0.767,0.772
+BRN,1991,Brunei Darussalam,0.771,0.776
+BRN,1992,Brunei Darussalam,0.777,0.78
+BRN,1993,Brunei Darussalam,0.781,0.784
+BRN,1994,Brunei Darussalam,0.786,0.788
+BRN,1995,Brunei Darussalam,0.79,0.792
+BRN,1996,Brunei Darussalam,0.793,0.796
+BRN,1997,Brunei Darussalam,0.794,0.8
+BRN,1998,Brunei Darussalam,0.794,0.804
+BRN,1999,Brunei Darussalam,0.8,0.808
+BRN,2000,Brunei Darussalam,0.802,0.812
+BRN,2001,Brunei Darussalam,0.803,0.817
+BRN,2002,Brunei Darussalam,0.807,0.82
+BRN,2003,Brunei Darussalam,0.813,0.824
+BRN,2004,Brunei Darussalam,0.818,0.828
+BRN,2005,Brunei Darussalam,0.822,0.831
+BRN,2006,Brunei Darussalam,0.825,0.834
+BRN,2007,Brunei Darussalam,0.825,0.836
+BRN,2008,Brunei Darussalam,0.825,0.838
+BRN,2009,Brunei Darussalam,0.827,0.84
+BRN,2010,Brunei Darussalam,0.827,0.842
+BRN,2011,Brunei Darussalam,0.831,0.844
+BRN,2012,Brunei Darussalam,0.839,0.846
+BRN,2013,Brunei Darussalam,0.839,0.847
+BRN,2014,Brunei Darussalam,0.838,0.849
+BRN,2015,Brunei Darussalam,0.838,0.851
+BRN,2016,Brunei Darussalam,0.839,0.853
+BRN,2017,Brunei Darussalam,0.838,0.855
+BRN,2018,Brunei Darussalam,0.836,0.857
+BRN,2019,Brunei Darussalam,0.83,0.85
+
+BTN,1990,Bhutan,NONE,0.506
+BTN,1991,Bhutan,NONE,0.517
+BTN,1992,Bhutan,NONE,0.529
+BTN,1993,Bhutan,NONE,0.54
+BTN,1994,Bhutan,NONE,0.552
+BTN,1995,Bhutan,NONE,0.564
+BTN,1996,Bhutan,NONE,0.576
+BTN,1997,Bhutan,NONE,0.588
+BTN,1998,Bhutan,NONE,0.601
+BTN,1999,Bhutan,NONE,0.615
+BTN,2000,Bhutan,NONE,0.629
+BTN,2001,Bhutan,NONE,0.643
+BTN,2002,Bhutan,NONE,0.657
+BTN,2003,Bhutan,NONE,0.671
+BTN,2004,Bhutan,NONE,0.684
+BTN,2005,Bhutan,0.52,0.697
+BTN,2006,Bhutan,0.526,0.708
+BTN,2007,Bhutan,0.542,0.719
+BTN,2008,Bhutan,0.551,0.728
+BTN,2009,Bhutan,0.561,0.737
+BTN,2010,Bhutan,0.574,0.744
+BTN,2011,Bhutan,0.585,0.751
+BTN,2012,Bhutan,0.597,0.758
+BTN,2013,Bhutan,0.61,0.764
+BTN,2014,Bhutan,0.618,0.77
+BTN,2015,Bhutan,0.628,0.776
+BTN,2016,Bhutan,0.637,0.781
+BTN,2017,Bhutan,0.646,0.787
+BTN,2018,Bhutan,0.649,0.792
+BTN,2019,Bhutan,0.65,0.79
+
+BWA,1990,Botswana,0.573,0.603
+BWA,1991,Botswana,0.579,0.588
+BWA,1992,Botswana,0.577,0.573
+BWA,1993,Botswana,0.576,0.557
+BWA,1994,Botswana,0.57,0.543
+BWA,1995,Botswana,0.576,0.529
+BWA,1996,Botswana,0.575,0.516
+BWA,1997,Botswana,0.577,0.504
+BWA,1998,Botswana,0.58,0.491
+BWA,1999,Botswana,0.582,0.48
+BWA,2000,Botswana,0.581,0.471
+BWA,2001,Botswana,0.582,0.466
+BWA,2002,Botswana,0.579,0.465
+BWA,2003,Botswana,0.586,0.47
+BWA,2004,Botswana,0.592,0.479
+BWA,2005,Botswana,0.601,0.494
+BWA,2006,Botswana,0.615,0.514
+BWA,2007,Botswana,0.628,0.538
+BWA,2008,Botswana,0.641,0.564
+BWA,2009,Botswana,0.65,0.591
+BWA,2010,Botswana,0.663,0.619
+BWA,2011,Botswana,0.677,0.645
+BWA,2012,Botswana,0.689,0.669
+BWA,2013,Botswana,0.701,0.692
+BWA,2014,Botswana,0.711,0.712
+BWA,2015,Botswana,0.717,0.728
+BWA,2016,Botswana,0.72,0.741
+BWA,2017,Botswana,0.726,0.751
+BWA,2018,Botswana,0.73,0.758
+BWA,2019,Botswana,0.73,0.76
+
+CAF,1990,Central African Republic,0.334,0.448
+CAF,1991,Central African Republic,0.328,0.442
+CAF,1992,Central African Republic,0.315,0.435
+CAF,1993,Central African Republic,0.315,0.427
+CAF,1994,Central African Republic,0.317,0.418
+CAF,1995,Central African Republic,0.319,0.408
+CAF,1996,Central African Republic,0.315,0.399
+CAF,1997,Central African Republic,0.318,0.39
+CAF,1998,Central African Republic,0.32,0.382
+CAF,1999,Central African Republic,0.323,0.376
+CAF,2000,Central African Republic,0.325,0.372
+CAF,2001,Central African Republic,0.327,0.37
+CAF,2002,Central African Republic,0.328,0.37
+CAF,2003,Central African Republic,0.328,0.372
+CAF,2004,Central African Republic,0.331,0.376
+CAF,2005,Central African Republic,0.336,0.381
+CAF,2006,Central African Republic,0.342,0.387
+CAF,2007,Central African Republic,0.347,0.394
+CAF,2008,Central African Republic,0.352,0.402
+CAF,2009,Central African Republic,0.356,0.411
+CAF,2010,Central African Republic,0.365,0.42
+CAF,2011,Central African Republic,0.374,0.43
+CAF,2012,Central African Republic,0.381,0.441
+CAF,2013,Central African Republic,0.363,0.452
+CAF,2014,Central African Republic,0.368,0.464
+CAF,2015,Central African Republic,0.375,0.475
+CAF,2016,Central African Republic,0.382,0.486
+CAF,2017,Central African Republic,0.391,0.496
+CAF,2018,Central African Republic,0.395,0.505
+CAF,2019,Central African Republic,0.39,0.51
+

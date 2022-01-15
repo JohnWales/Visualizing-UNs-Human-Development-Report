@@ -29,37 +29,10 @@ app = dash.Dash(__name__)
 # # App layout
 
 
-df7 = pd.read_csv('csv_files/hdi_clean')
 df = pd.read_csv('csv_files/hdi.csv')
 df1 = pd.read_csv('csv_files/life_expectancy_index.csv')
 # df7 = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminderDataFiveYear.csv')
-
-
-# df_year = df[['1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019']]
-
-
-
-# HDI 2019
-# fig = px.scatter(df, x="Country_code", y="2019",
-#                  size="2019", color="Country_name", hover_name="Country_name",
-#                  size_max=10)
-
-# # Life expectancy 2018
-# fig1 = px.scatter(df1, x="Country_code", y="2018",
-#                  size="2018", color="Country_name", hover_name="Country_name",
-#                  size_max=10)
-
-# # HDI bar chart 2019
-# fig2 = px.bar(df, x = 'Country_code', y = '2019', 
-#                 color="Country_name", hover_name="Country_name")
-
-# # Life expectancy 2019
-# fig3 = px.scatter(df1, x = 'Country_code', y = '2019', hover_name="Country_name")
-
-# # Life Expectancy 2019 Line Graph
-# fig4 = px.line(df1, x = 'Country_code', y = '2019', title='Line Graph', hover_name="Country_name")
-
-# fig5 = px.strip(df1, x='Country_code', y='2019')
+df7 = pd.read_csv('csv_files/all_data.csv')
 
 
 external_stylesheets = [
@@ -180,13 +153,11 @@ def update_graph(country_chosen):
 def update_figure(selected_year):
     filtered_df = df7[df7.year == selected_year]
 
-    fig = px.scatter(filtered_df, x="gdpPercap", y="lifeExp",
-                     size="pop", color="continent", hover_name="country",
-                     log_x=True, size_max=55)
+    fig7 = px.scatter(filtered_df, x="life_expectancy", y="hdi_value", hover_name="Country_name", size_max=100)
 
-    fig.update_layout(transition_duration=500)
+    fig7.update_layout(transition_duration=500)
 
-    return fig
+    return fig7
 
 
 
