@@ -69,10 +69,10 @@ app.layout = html.Div(children=[
     html.H3("Pick Country"),
     dcc.Dropdown(id='dropdown', value=[], multi=True,
     options=[{'label': x, 'value': x} for x in
-            df.Country_name.unique()]),
+            df7.Country_name.unique()]),
     # dcc.Dropdown(id='dpdn3', value=[], multi=True,
     #         options=[{'label': x, 'value': x} for x in
-    #                 df1.Country_name.unique()]),
+    #                 df7.Country_name.unique()]),
 
 
     dcc.Graph(id='my-graph', figure={}, clickData=None, hoverData=None, # I assigned None for tutorial purposes. By defualt, these are None, unless you specify otherwise.
@@ -88,6 +88,10 @@ app.layout = html.Div(children=[
         className='six columns'
         )
     ]),
+
+
+
+
 
 
     dcc.Graph(id='graph-with-slider'),
@@ -134,15 +138,19 @@ Input(component_id='dropdown', component_property='value')
 )
 
 def update_graph(country_chosen):
-    dff = df[df.Country_name.isin(country_chosen)]
+    dff = df7[df7.Country_name.isin(country_chosen)]
     # dff1 = df[df.Country_name.isin(country_chosen1)]
-    fig = px.line(data_frame=dff, x='2018', y='Country_code', color='Country_name', hover_name="2018")
+    fig = px.line(data_frame=dff, x='year', y='life_expectancy', color='Country_name', hover_name="year")
     # fig1 = px.line(data_frame=dff1, x='2018', y='Country_code', color='Country_name')
     # fig = px.bar(data_frame=dff, x ='2018', y ='Country_code', color="Country_name")
     fig.update_traces(mode='lines+markers')
     # fig1.update_traces(mode='lines+markers')
 
     return fig
+
+
+
+
 
 
 
