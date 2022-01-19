@@ -67,12 +67,19 @@ app.layout = html.Div(children=[
         html.P(children="This is a visual representation on the United Nations Human Developemtn Report from 1990 to present day.", className='header-description'),
 
     html.H3("Pick Country"),
-    dcc.Dropdown(id='dropdown', value=[], multi=True,
+    dcc.Dropdown(id='country-dropdown', value=[], multi=True,
     options=[{'label': x, 'value': x} for x in
             df7.Country_name.unique()]),
-    # dcc.Dropdown(id='dpdn3', value=[], multi=True,
-    #         options=[{'label': x, 'value': x} for x in
-    #                 df7.Country_name.unique()]),
+
+    html.H3("x-axis"),
+    dcc.Dropdown(id='x-dropdown', value=[], multi=True,
+    options=[{'label': x, 'value': x} for x in
+            df7]),
+
+    html.H3("y-axis"),
+    dcc.Dropdown(id='y-dropdown', value=[], multi=True,
+    options=[{'label': x, 'value': x} for x in
+            df7]),
 
 
     dcc.Graph(id='my-graph', figure={}, clickData=None, hoverData=None, # I assigned None for tutorial purposes. By defualt, these are None, unless you specify otherwise.
@@ -87,6 +94,15 @@ app.layout = html.Div(children=[
             },
         className='six columns'
         )
+    # dcc.Slider(
+    #     id='year-slider',
+    #     min=df7['year'].min(),
+    #     max=df7['year'].max(),
+    #     value=df7['year'].min(),
+    #     marks={str(year): str(year) for year in df7['year'].unique()},
+    #     step=None
+    # )
+
     ]),
 
 
@@ -94,15 +110,15 @@ app.layout = html.Div(children=[
 
 
 
-    dcc.Graph(id='graph-with-slider'),
-    dcc.Slider(
-        id='year-slider',
-        min=df7['year'].min(),
-        max=df7['year'].max(),
-        value=df7['year'].min(),
-        marks={str(year): str(year) for year in df7['year'].unique()},
-        step=None
-    )
+    # dcc.Graph(id='graph-with-slider'),
+    # dcc.Slider(
+    #     id='year-slider',
+    #     min=df7['year'].min(),
+    #     max=df7['year'].max(),
+    #     value=df7['year'].min(),
+    #     marks={str(year): str(year) for year in df7['year'].unique()},
+    #     step=None
+    # )
 
 
 
@@ -129,12 +145,11 @@ app.layout = html.Div(children=[
 
 
 
-
-
-
 @app.callback(
 Output(component_id='my-graph', component_property='figure'),
-Input(component_id='dropdown', component_property='value')
+Input(component_id='country-dropdown', component_property='value')
+# Input(component_id='x-dropdown', component_property='value'),
+# Input(component_id='y-dropdown', component_property='value')
 )
 
 def update_graph(country_chosen):
@@ -151,21 +166,34 @@ def update_graph(country_chosen):
 
 
 
+# @app.callback(
+# Output(component_id='my-graph', component_property='figure'),
+# Input(component_id='dropdown', component_property='value')
+# )
+
+# def update_graph(country_chosen):
+#     dff = df7[df7.Country_name.isin(country_chosen)]
+#     # dff1 = df[df.Country_name.isin(country_chosen1)]
+#     fig = px.line(data_frame=dff, x='year', y='life_expectancy', color='Country_name', hover_name="year")
+#     # fig1 = px.line(data_frame=dff1, x='2018', y='Country_code', color='Country_name')
+#     # fig = px.bar(data_frame=dff, x ='2018', y ='Country_code', color="Country_name")
+#     fig.update_traces(mode='lines+markers')
+#     # fig1.update_traces(mode='lines+markers')
+
+#     return fig
 
 
+# @app.callback(
+#     Output('graph-with-slider', 'figure'),
+#     Input('year-slider', 'value'))
+# def update_figure(selected_year):
+#     filtered_df = df7[df7.year == selected_year]
 
+#     fig7 = px.scatter(filtered_df, x="life_expectancy", y="hdi_value", hover_name="Country_name", size_max=100, color='Country_name')
 
-@app.callback(
-    Output('graph-with-slider', 'figure'),
-    Input('year-slider', 'value'))
-def update_figure(selected_year):
-    filtered_df = df7[df7.year == selected_year]
+#     fig7.update_layout(transition_duration=500)
 
-    fig7 = px.scatter(filtered_df, x="life_expectancy", y="hdi_value", hover_name="Country_name", size_max=100)
-
-    fig7.update_layout(transition_duration=500)
-
-    return fig7
+#     return fig7
 
 
 
