@@ -44,6 +44,12 @@ external_stylesheets = [
 ]
 
 
+# df9 = px.data.gapminder().query("year==2007")
+# fig = px.scatter_geo(df9, locations="iso_alpha", color="continent",
+#                      hover_name="country", size="pop",
+#                      projection="natural earth")
+# fig.show()
+
 
 
 
@@ -52,11 +58,11 @@ external_stylesheets = [
 
 # --------------------------------------------------------------------------------------------------------- #
 
+df8 = df7.copy()
+# df8 = df8['year','hdi_value','life_expectancy']
 
-
-
-
-
+df8 = df8[['life_expectancy','year','hdi_value']]
+# print(df8)
 
 
 app.layout = html.Div(children=[
@@ -74,12 +80,12 @@ app.layout = html.Div(children=[
     html.H3("x-axis"),
     dcc.Dropdown(id='x-dropdown', value=[], multi=True,
     options=[{'label': x, 'value': x} for x in
-            df7]),
+            df8]),
 
     html.H3("y-axis"),
     dcc.Dropdown(id='y-dropdown', value=[], multi=True,
     options=[{'label': x, 'value': x} for x in
-            df7]),
+            df8]),
 
 
     dcc.Graph(id='my-graph', figure={}, clickData=None, hoverData=None, # I assigned None for tutorial purposes. By defualt, these are None, unless you specify otherwise.
