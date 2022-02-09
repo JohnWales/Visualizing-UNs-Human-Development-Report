@@ -120,7 +120,8 @@ def display_graphs(n_clicks, div_children):
                     'type': 'dynamic-dpn-ctg',
                     'index': n_clicks
                 },
-                options=[{'label': c, 'value': c} for c in ['hdi_value', 'life_expectancy', 'Country_name', 'year']],
+                # options=[{'label': c, 'value': c} for c in ['hdi_value', 'life_expectancy', 'Country_name', 'year']],
+                options=[{'label': c, 'value': c} for c in ['year']],
                 value=[],
                 clearable=False
             ),
@@ -147,11 +148,12 @@ def display_graphs(n_clicks, div_children):
      Input(component_id={'type': 'dynamic-dpn-num', 'index': MATCH}, component_property='value'),
      Input({'type': 'dynamic-choice', 'index': MATCH}, 'value')]
 )
+# s_value = Countries selected from dropdown
 # ctg_value = Country_name
 # num_value = year
 def update_graph(s_value, ctg_value, num_value, chart_choice):
     # Country from dropdown
-    print(s_value)
+    print("s_value = ", s_value)
     # dff = df[df['year'].isin(s_value)]
     # print(dff)
 
@@ -163,7 +165,7 @@ def update_graph(s_value, ctg_value, num_value, chart_choice):
     
     if chart_choice == 'bar':
         # dff = dff.groupby([ctg_value], as_index=False)[['hdi_value', 'life_expectancy', 'Country_name', 'year']].sum()
-        fig = px.bar(dff, x='year', y=num_value, color='Country_name', hover_name="year")
+        fig = px.bar(dff, x='Country_name', y=num_value, color='Country_name', hover_name="year")
         return fig
     elif chart_choice == 'line':
         if len(s_value) == 0:
@@ -176,7 +178,9 @@ def update_graph(s_value, ctg_value, num_value, chart_choice):
             fig.update_traces(mode='lines+markers')
             return fig
     elif chart_choice == 'pie':
-        fig = px.pie(dff, names=ctg_value, values=num_value)
+        dff = df[df['Country_name'].isin(s_value)]
+        # fig = px.pie(dff, names=ctg_value, values=num_value, hover_name="Country_name")
+        fig = px.pie(dff, names="Country_name", values=num_value, hover_name="Country_name")
         return fig
 
 
