@@ -1,4 +1,4 @@
-  body {
+  /* body {
     font-family: "Lato", sans-serif;
     margin: 50;
     background-color: #F7F7F7;
@@ -9,10 +9,6 @@ div {
     background-color: #222222;
     border-radius: 10px;
     padding: 10px;
-    /* height: 256px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center; */
 }
 
 .header-title {
@@ -45,3 +41,8 @@ div {
 h3 {
     color: white;
 }
+
+html.Div {
+    display: grid;
+    grid: 100px / auto;
+} */

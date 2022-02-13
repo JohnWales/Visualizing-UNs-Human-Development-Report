@@ -63,7 +63,7 @@ external_stylesheets = [
 df8 = df.copy()
 # df8 = df8['year','hdi_value','life_expectancy']
 
-df8 = df8[['life_expectancy','year','hdi_value']]
+df8 = df8[['Life Expectancy','year','Human Development Index']]
 # print(df8)
 
 available_indicators = df['Country_name'].unique()
@@ -113,6 +113,7 @@ def display_graphs(n_clicks, div_children):
                 options=[{'label': s, 'value': s} for s in np.sort(df['Country_name'].unique())],
                 multi=True,
                 value=[],
+                placeholder="Select a Country"
             ),
             html.H3("x-axis"),
             dcc.Dropdown(
@@ -120,10 +121,12 @@ def display_graphs(n_clicks, div_children):
                     'type': 'dynamic-dpn-ctg',
                     'index': n_clicks
                 },
-                # options=[{'label': c, 'value': c} for c in ['hdi_value', 'life_expectancy', 'Country_name', 'year']],
+                # options=[{'label': c, 'value': c} for c in ['Human Development Index', 'Life Expectancy', 'Country_name', 'year']],
                 options=[{'label': c, 'value': c} for c in ['year']],
                 value=[],
-                clearable=False
+                clearable=False,
+                placeholder="Select a value for the x-axis",
+                disabled=True
             ),
             html.H3("y-axis"),
             dcc.Dropdown(
@@ -131,14 +134,18 @@ def display_graphs(n_clicks, div_children):
                     'type': 'dynamic-dpn-num',
                     'index': n_clicks
                 },
-                options=[{'label': n, 'value': n} for n in ['hdi_value', 'life_expectancy', 'Country_name', 'year']],
+                # options=[{'label': n, 'value': n} for n in ['hdi_value', 'life_expectancy', 'Country_name', 'year']],
+                options=[{'label': n, 'value': n} for n in ['Human Development Index', 'Life Expectancy', "Education Index"]],
                 value=[],
-                clearable=False
+                clearable=False,
+                placeholder="Select a value for the y-axis"
             )
         ]
     )
     div_children.append(new_child)
     return div_children
+
+
 
 
 @app.callback(
@@ -148,6 +155,8 @@ def display_graphs(n_clicks, div_children):
      Input(component_id={'type': 'dynamic-dpn-num', 'index': MATCH}, component_property='value'),
      Input({'type': 'dynamic-choice', 'index': MATCH}, 'value')]
 )
+
+
 # s_value = Countries selected from dropdown
 # ctg_value = Country_name
 # num_value = year
@@ -165,23 +174,32 @@ def update_graph(s_value, ctg_value, num_value, chart_choice):
     
     if chart_choice == 'bar':
         # dff = dff.groupby([ctg_value], as_index=False)[['hdi_value', 'life_expectancy', 'Country_name', 'year']].sum()
-        fig = px.bar(dff, x='Country_name', y=num_value, color='Country_name', hover_name="year")
+        fig = px.bar(dff, x='Country_name', y=num_value, color='Country_name', hover_name="year", barmode='group', title="Bar Chart", 
+        labels={
+                     "Country_name": "Country name"
+                 },)
         return fig
     elif chart_choice == 'line':
-        if len(s_value) == 0:
-            return {}
-        else:
+        # if len(s_value) == 0:
+        #     return {}
+        # else:
             # dff = dff.groupby([ctg_value, 'year'], as_index=False)[['hdi_value', 'life_expectancy', 'Country_name', 'year']].sum()
             # fig = px.line(dff, x='year', y=num_value, color=ctg_value)
             # return fig
-            fig = px.line(dff, x='year', y=num_value, color='Country_name', hover_name="year")
+            fig = px.line(dff, x='year', y=num_value, color='Country_name', hover_name="year", title="Line Graph", 
+            labels={
+                     "year": "Year"
+                 },)
             fig.update_traces(mode='lines+markers')
             return fig
     elif chart_choice == 'pie':
-        dff = df[df['Country_name'].isin(s_value)]
-        # fig = px.pie(dff, names=ctg_value, values=num_value, hover_name="Country_name")
-        fig = px.pie(dff, names="Country_name", values=num_value, hover_name="Country_name")
-        return fig
+        # if len(s_value) == 60:
+        #     return {}
+        # else:
+            dff = df[df['Country_name'].isin(s_value)]
+            # fig = px.pie(dff, names=ctg_value, values=num_value, hover_name="Country_name")
+            fig = px.pie(dff, names="Country_name", values=num_value, title="Pie Chart")
+            return fig
 
 
 if __name__ == '__main__':
