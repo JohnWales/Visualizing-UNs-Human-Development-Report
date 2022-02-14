@@ -11,18 +11,25 @@ from dash import html
 from dash.dependencies import Input, Output
 import numpy as np
 
+import os
+
 import json
 
+# from flask_caching import Cache
+
 app = dash.Dash(__name__)
+server = app.server
+# cache = Cache(app.server, config={
+#     # try 'filesystem' if you don't want to setup redis
+#     'CACHE_TYPE': 'redis',
+#     'CACHE_REDIS_URL': os.environ.get('REDIS_URL', '')
+# })
+# app.config.suppress_callback_exceptions = True
+
+# timeout = 20
 
 
 # --------------------------------------------------------------------------------------------------------- #
-# response = requests.get('http://ec2-54-174-131-205.compute-1.amazonaws.com/API/HDRO_API.php/indicator_id=103206')
-
-# # List of countries
-# api = response.json()
-# df = pd.DataFrame(api)
-# print(df["country_name"].values)
 
 
 
@@ -46,24 +53,12 @@ external_stylesheets = [
     },
 ]
 
-
-# df9 = px.data.gapminder().query("year==2007")
-# fig = px.scatter_geo(df9, locations="iso_alpha", color="continent",
-#                      hover_name="country", size="pop",
-#                      projection="natural earth")
-# fig.show()
-
-
-
-
-
-
 # --------------------------------------------------------------------------------------------------------- #
 
 df8 = df.copy()
 # df8 = df8['year','hdi_value','life_expectancy']
 
-df8 = df8[['Life Expectancy','year','Human Development Index']]
+df8 = df8[['Life Expectancy','year','Human Development Index','Education Index','Income Index']]
 # print(df8)
 
 available_indicators = df['Country_name'].unique()
@@ -74,7 +69,10 @@ app.layout = html.Div([
     html.Div(children=[
         html.Button('Add Chart', id='add-chart', n_clicks=0),
     ]),
-    html.Div(id='container', children=[])
+    html.Div(id='container', children=[]),
+
+    # dcc.Store stores the intermediate value
+    dcc.Store(id='intermediate-value')
 ])
 
 
@@ -121,7 +119,7 @@ def display_graphs(n_clicks, div_children):
                     'type': 'dynamic-dpn-ctg',
                     'index': n_clicks
                 },
-                # options=[{'label': c, 'value': c} for c in ['Human Development Index', 'Life Expectancy', 'Country_name', 'year']],
+                # options=[{'label': c, 'value': c} for c in ['Human Development Index', 'Life Expectancy', 'Country_name', 'year', 'Income Index']],
                 options=[{'label': c, 'value': c} for c in ['year']],
                 value=[],
                 clearable=False,
@@ -135,7 +133,7 @@ def display_graphs(n_clicks, div_children):
                     'index': n_clicks
                 },
                 # options=[{'label': n, 'value': n} for n in ['hdi_value', 'life_expectancy', 'Country_name', 'year']],
-                options=[{'label': n, 'value': n} for n in ['Human Development Index', 'Life Expectancy', "Education Index"]],
+                options=[{'label': n, 'value': n} for n in ['Human Development Index', 'Life Expectancy', "Education Index", 'Income Index']],
                 value=[],
                 clearable=False,
                 placeholder="Select a value for the y-axis"
@@ -204,121 +202,3 @@ def update_graph(s_value, ctg_value, num_value, chart_choice):
 
 if __name__ == '__main__':
     app.run_server(debug=True)
-
-
-# app.layout = html.Div(children=[
-
-
-#     html.Div([
-#         html.H1(children="Visualising the Human Developemnt Report", className='header-title', style={'fontSize': '48px', 'text-align': 'center'}),
-#         html.P(children="This is a visual representation on the United Nations Human Developemtn Report from 1990 to present day.", className='header-description'),
-
-#     html.Div
-#     ([
-#         html.H3("Pick Country"),
-#         dcc.Dropdown(id='country-dropdown', value=[], multi=True,
-#         options=[{'label': x, 'value': x} for x in
-#                 df7.Country_name.unique()]),
-
-#         html.H3("x-axis"),
-#         dcc.Dropdown(id='x-dropdown', value=[], multi=True,
-#         options=[{'label': x, 'value': x} for x in
-#                 df8]),
-
-#         html.H3("y-axis"),
-#         dcc.Dropdown(id='y-dropdown', value=[], multi=True,
-#         options=[{'label': x, 'value': x} for x in
-#                 df8]),
-#     ]),
-
-
-
-
-
-#     dcc.Graph(id='my-graph', figure={}, clickData=None, hoverData=None, # I assigned None for tutorial purposes. By defualt, these are None, unless you specify otherwise.
-#         config={
-#             'staticPlot': False,     # Zooming when dragging mouse and forming a box and also classical zooming
-#             'scrollZoom': False,      # Classical zooming
-#             'doubleClick': 'reset',  # 'reset', 'autosize' or 'reset+autosize', False
-#             'showTips': False,     
-#             'displayModeBar': True,  # True, False, 'hover'
-#             'watermark': False,
-#             # 'modeBarButtonsToRemove': ['pan2d','select2d'],
-#             },
-#         className='six columns'
-#         ),
-#     dcc.Slider(
-#         id='year-slider',
-#         min=df7['year'].min(),
-#         max=df7['year'].max(),
-#         value=df7['year'].min(),
-#         marks={str(year): str(year) for year in df7['year'].unique()},
-#         step=None
-#     )
-
-#     ]),
-
-# ])
-
-
-
-   
-
-       
-
-
-
-
-
-
-
-
-
-
-
-
-# --------------------------------------------------------------------------------------------------------- #
-
-
-
-
-
-
-# @app.callback(
-# Output(component_id='my-graph', component_property='figure'),
-# Input(component_id='country-dropdown', component_property='value')
-# # Input('year-slider', 'value'),
-# # Input(component_id='x-dropdown', component_property='value'),
-# # Input(component_id='y-dropdown', component_property='value')
-# )
-
-# def update_graph(country_chosen):
-#     dff = df7[df7.Country_name.isin(country_chosen)]
-
-#     fig7 = px.line(data_frame=dff, x='year', y='life_expectancy', color='Country_name', hover_name="year")
-
-#     fig7.update_traces(mode='lines+markers')
-
-#     return fig7
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# --------------------------------------------------------------------------------------------------------- #
-
-
-
-
-
-# if __name__ == '__main__':
-#     app.run_server(debug=True)
