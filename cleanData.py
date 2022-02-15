@@ -22,4 +22,3 @@ with open('cleaner_data.txt', 'r') as data2:
         for line in data2:
             if line.strip("\n") != '    "indicator_value": {':
                 result2.write(line)
-

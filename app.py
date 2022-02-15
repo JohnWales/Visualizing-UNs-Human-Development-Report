@@ -137,10 +137,12 @@ def display_graphs(n_clicks, div_children):
 
 @app.callback(
     Output({'type': 'dynamic-graph', 'index': MATCH}, 'figure'),
+    # Multiple inputs so it needs to be inside a list
     [Input(component_id={'type': 'dynamic-dpn-s', 'index': MATCH}, component_property='value'),
      Input(component_id={'type': 'dynamic-dpn-ctg', 'index': MATCH}, component_property='value'),
      Input(component_id={'type': 'dynamic-dpn-num', 'index': MATCH}, component_property='value'),
      Input({'type': 'dynamic-choice', 'index': MATCH}, 'value')]
+    #  prevent_initial_call=True
 )
 
 
@@ -173,21 +175,22 @@ def update_graph(s_value, ctg_value, num_value, chart_choice):
             # dff = dff.groupby([ctg_value, 'year'], as_index=False)[['hdi_value', 'life_expectancy', 'Country_name', 'year']].sum()
             # fig = px.line(dff, x='year', y=num_value, color=ctg_value)
             # return fig
-            fig = px.line(dff, x='year', y=num_value, color='Country_name', hover_name="year", title="Line Graph", 
-            labels={
-                     "year": "Year"
-                 },)
-            fig.update_traces(mode='lines+markers')
-            return fig
+        fig = px.line(dff, x='year', y=num_value, color='Country_name', hover_name="year", title="Line Graph", 
+        labels={
+                    "year": "Year"
+                },)
+        fig.update_traces(mode='lines+markers')
+        return fig
     elif chart_choice == 'pie':
         # if len(s_value) == 60:
         #     return {}
         # else:
-            dff = df[df['Country_name'].isin(s_value)]
-            # fig = px.pie(dff, names=ctg_value, values=num_value, hover_name="Country_name")
-            fig = px.pie(dff, names="Country_name", values=num_value, title="Pie Chart")
-            return fig
+        dff = df[df['Country_name'].isin(s_value)]
+        # fig = px.pie(dff, names=ctg_value, values=num_value, hover_name="Country_name")
+        fig = px.pie(dff, names="Country_name", values=num_value, title="Pie Chart")
+        return fig
 
 
 if __name__ == '__main__':
     app.run_server(debug=True)
+
