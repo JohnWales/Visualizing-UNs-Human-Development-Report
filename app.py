@@ -89,7 +89,10 @@ def display_graphs(n_clicks, div_children):
                 options=[
                          {'label': 'Line Chart', 'value': 'line'},
                          {'label': 'Bar Chart', 'value': 'bar'},
-                         {'label': 'Pie Chart', 'value': 'pie'}],
+                         {'label': 'Pie Chart', 'value': 'pie'},
+                         {'label': 'Map', 'value': 'map'},
+                         {'label': 'Bubble Map', 'value': 'bubblemap'}],
+                         
                 value='line',
             ),
             dcc.Dropdown(
@@ -168,13 +171,8 @@ def update_graph(s_value, ctg_value, num_value, chart_choice):
                      "Country_name": "Country name"
                  },)
         return fig
+        
     elif chart_choice == 'line':
-        # if len(s_value) == 0:
-        #     return {}
-        # else:
-            # dff = dff.groupby([ctg_value, 'year'], as_index=False)[['hdi_value', 'life_expectancy', 'Country_name', 'year']].sum()
-            # fig = px.line(dff, x='year', y=num_value, color=ctg_value)
-            # return fig
         fig = px.line(dff, x='year', y=num_value, color='Country_name', hover_name="year", title="Line Graph", 
         labels={
                     "year": "Year"
@@ -182,13 +180,19 @@ def update_graph(s_value, ctg_value, num_value, chart_choice):
         fig.update_traces(mode='lines+markers')
         return fig
     elif chart_choice == 'pie':
-        # if len(s_value) == 60:
-        #     return {}
-        # else:
         dff = df[df['Country_name'].isin(s_value)]
         # fig = px.pie(dff, names=ctg_value, values=num_value, hover_name="Country_name")
         fig = px.pie(dff, names="Country_name", values=num_value, title="Pie Chart")
         return fig
+    elif chart_choice == 'map':
+        # # dff = df[df['Country_name'].isin(s_value)]
+        fig = px.choropleth(dff, color="Country_name", scope="world", locations="Country_code", hover_name="Country_name", 
+                    color_continuous_scale=px.colors.sequential.Plasma)
+        return fig
+    elif chart_choice == 'bubblemap':
+        fig = px.scatter_geo(dff, locations="Country_code")
+        return fig
+
 
 
 if __name__ == '__main__':
