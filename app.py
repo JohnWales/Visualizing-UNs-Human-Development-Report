@@ -83,7 +83,7 @@ def display_graphs(n_clicks, div_children):
             ),
             dcc.RadioItems(
                 id={
-                    'type': 'dynamic-choice',
+                    'type': 'map-choice',
                     'index': n_clicks
                 },
                 options=[
@@ -97,7 +97,7 @@ def display_graphs(n_clicks, div_children):
             ),
             dcc.Dropdown(
                 id={
-                    'type': 'dynamic-dpn-s',
+                    'type': 'country-dropdown',
                     'index': n_clicks
                 },
                 options=[{'label': s, 'value': s} for s in np.sort(df['Country_name'].unique())],
@@ -108,7 +108,7 @@ def display_graphs(n_clicks, div_children):
             html.H3("x-axis"),
             dcc.Dropdown(
                 id={
-                    'type': 'dynamic-dpn-ctg',
+                    'type': 'xaxis-dropdown',
                     'index': n_clicks
                 },
                 # options=[{'label': c, 'value': c} for c in ['Human Development Index', 'Life Expectancy', 'Country_name', 'year', 'Income Index']],
@@ -121,7 +121,7 @@ def display_graphs(n_clicks, div_children):
             html.H3("y-axis"),
             dcc.Dropdown(
                 id={
-                    'type': 'dynamic-dpn-num',
+                    'type': 'yaxis-dropdown',
                     'index': n_clicks
                 },
                 # options=[{'label': n, 'value': n} for n in ['hdi_value', 'life_expectancy', 'Country_name', 'year']],
@@ -141,51 +141,52 @@ def display_graphs(n_clicks, div_children):
 @app.callback(
     Output({'type': 'dynamic-graph', 'index': MATCH}, 'figure'),
     # Multiple inputs so it needs to be inside a list
-    [Input(component_id={'type': 'dynamic-dpn-s', 'index': MATCH}, component_property='value'),
-     Input(component_id={'type': 'dynamic-dpn-ctg', 'index': MATCH}, component_property='value'),
-     Input(component_id={'type': 'dynamic-dpn-num', 'index': MATCH}, component_property='value'),
-     Input({'type': 'dynamic-choice', 'index': MATCH}, 'value')]
+    [Input(component_id={'type': 'country-dropdown', 'index': MATCH}, component_property='value'),
+     Input(component_id={'type': 'xaxis-dropdown', 'index': MATCH}, component_property='value'),
+     Input(component_id={'type': 'yaxis-dropdown', 'index': MATCH}, component_property='value'),
+     Input({'type': 'map-choice', 'index': MATCH}, 'value')]
+
     #  prevent_initial_call=True
 )
 
 
-# s_value = Countries selected from dropdown
+# country-chosen = Countries selected from dropdown
 # ctg_value = Country_name
-# num_value = year
-def update_graph(s_value, ctg_value, num_value, chart_choice):
+# indicator_chosen_yaxis = year
+def update_graph(country_chosen, ctg_value, indicator_chosen_yaxis, chart_choice):
     # Country from dropdown
-    print("s_value = ", s_value)
-    # dff = df[df['year'].isin(s_value)]
+    print("country-chosen = ", country_chosen)
+    # dff = df[df['year'].isin(country-chosen)]
     # print(dff)
 
     print("ctg_value = ", ctg_value)
-    print("num_value = ", num_value)
+    print("indicator_chosen_yaxis = ", indicator_chosen_yaxis)
     print("chart_choice = ", chart_choice)
 
-    dff = df[df.Country_name.isin(s_value)]
+    dff = df[df.Country_name.isin(country_chosen)]
     
     if chart_choice == 'bar':
         # dff = dff.groupby([ctg_value], as_index=False)[['hdi_value', 'life_expectancy', 'Country_name', 'year']].sum()
-        fig = px.bar(dff, x='Country_name', y=num_value, color='Country_name', hover_name="year", barmode='group', title="Bar Chart", 
+        fig = px.bar(dff, x='Country_name', y=indicator_chosen_yaxis, color='Country_name', hover_name="year", barmode='group', title="Bar Chart", 
         labels={
                      "Country_name": "Country name"
                  },)
         return fig
         
     elif chart_choice == 'line':
-        fig = px.line(dff, x='year', y=num_value, color='Country_name', hover_name="year", title="Line Graph", 
+        fig = px.line(dff, x='year', y=indicator_chosen_yaxis, color='Country_name', hover_name="year", title="Line Graph", 
         labels={
                     "year": "Year"
                 },)
         fig.update_traces(mode='lines+markers')
         return fig
     elif chart_choice == 'pie':
-        dff = df[df['Country_name'].isin(s_value)]
-        # fig = px.pie(dff, names=ctg_value, values=num_value, hover_name="Country_name")
-        fig = px.pie(dff, names="Country_name", values=num_value, title="Pie Chart")
+        dff = df[df['Country_name'].isin(country_chosen)]
+        # fig = px.pie(dff, names=ctg_value, values=indicator_chosen_yaxis, hover_name="Country_name")
+        fig = px.pie(dff, names="Country_name", values=indicator_chosen_yaxis, title="Pie Chart")
         return fig
     elif chart_choice == 'map':
-        # # dff = df[df['Country_name'].isin(s_value)]
+        # # dff = df[df['Country_name'].isin(country_chosen)]
         fig = px.choropleth(dff, color="Country_name", scope="world", locations="Country_code", hover_name="Country_name", 
                     color_continuous_scale=px.colors.sequential.Plasma)
         return fig
