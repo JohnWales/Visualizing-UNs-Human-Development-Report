@@ -34,6 +34,21 @@ df = pd.read_csv('csv_files/all_data.csv')
 # df = pd.read_csv('csv_files/backup.csv')
 
 
+# Found that all the indicators except for year are objects not ints. This could be the source of the random values along the axis problem
+print(df.info())
+
+
+# Trying to make the y axis ascend numerically
+# df = df.sort_values("Human Development Index").reset_index(drop=True)
+# df = df.sort_values("Life Expectancy").reset_index(drop=True)
+# df = df.sort_values("Education Index").reset_index(drop=True)
+# df = df.sort_values("Income Index").reset_index(drop=True)
+
+# df.reset_index(drop=True, inplace=True)
+
+
+
+
 # df17 = df7.sort_values("hdi_value").reset_index(drop=True)
 
 external_stylesheets = [
@@ -187,11 +202,11 @@ def update_graph(country_chosen, ctg_value, indicator_chosen_yaxis, chart_choice
         return fig
     elif chart_choice == 'map':
         # # dff = df[df['Country_name'].isin(country_chosen)]
-        fig = px.choropleth(dff, color="Country_name", scope="world", locations="Country_code", hover_name="Country_name", 
+        fig = px.choropleth(dff, color="Country_name", scope="world", locations="Country_code", hover_name="Country_name", title="Map", 
                     color_continuous_scale=px.colors.sequential.Plasma)
         return fig
     elif chart_choice == 'bubblemap':
-        fig = px.scatter_geo(dff, locations="Country_code")
+        fig = px.scatter_geo(dff, locations="Country_code", title="Bubble Map", hover_name="Country_name")
         return fig
 
 
