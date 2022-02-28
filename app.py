@@ -235,24 +235,28 @@ import plotly.graph_objects as go
 df = pd.read_csv('csv_files/all_data.csv')
 # df = pd.read_csv('csv_files/backup.csv')
 
+df8 = df.copy()
+df8 = df8[['Life Expectancy','Human Development Index','Education Index','Income Index']]
+
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.layout = html.Div([
-    dcc.Dropdown(id='country_dropdown', value=[], multi=True,
-                 options=[{'label': x, 'value': x} for x in
-                          df.Country_name.unique()], 
-                placeholder="Select a Country"),
-
     dcc.Dropdown(
-        id={
-            'type': 'yaxis-dropdown'
-            # 'index': n_clicks
-        },
-        options=[{'label': n, 'value': n} for n in ['Life Expectancy','Human Development Index','Education Index','Income Index']],
+        id='yaxis-dropdown',
         value=[],
+        # multi=True,
+        options=[{'label': n, 'value': n} for n in df8],
         clearable=False,
         placeholder="Select a value for the y-axis"
+    ),
+    dcc.Dropdown(id='country_dropdown',
+                value=[],
+                # value=['United States', 'Russian Federation'], 
+                multi=True,
+                clearable=True,
+                options=[{'label': x, 'value': x} for x in df.Country_name.unique()], 
+                placeholder="Select a Country"
     ),
 
     html.Div([
@@ -261,15 +265,21 @@ app.layout = html.Div([
                 'staticPlot': False,     # True, False
                 'scrollZoom': False,      # True, False
                 'doubleClick': 'reset',  # 'reset', 'autosize' or 'reset+autosize', False
-                'showTips': False,       # True, False
-                'displayModeBar': True,  # True, False, 'hover'
-                'watermark': True,
-                # 'modeBarButtonsToRemove': ['pan2d','select2d'],
+                'showTips': True,       # True, False
+                'displayModeBar': 'hover',  # True, False, 'hover'
+                'watermark': False,
+                'modeBarButtonsToRemove': ['pan2d','select2d', 'lasso2d', 'autoScale2d', 'resetScale2d', 'zoom2d'],
                 },
             className='six columns'
             ),
-        dcc.Graph(id='pie-graph', figure={}, className='six columns'),
-        dcc.Graph(id='map-graph', figure={}, className='six columns')
+        dcc.Graph(id='pie-graph', figure={}, className='six columns',
+            config={
+                'modeBarButtonsToRemove': ['pan2d','select2d', 'lasso2d', 'autoScale2d', 'resetScale2d', 'zoom2d'],
+            }),
+        dcc.Graph(id='map-graph', figure={}, className='six columns',
+            config={
+                'modeBarButtonsToRemove': ['pan2d','select2d', 'lasso2d', 'autoScale2d', 'resetScale2d', 'zoom2d'],
+            })
     ])
 ])
 
@@ -277,12 +287,12 @@ app.layout = html.Div([
 @app.callback(
     Output(component_id='my-graph', component_property='figure'),
     Input(component_id='country_dropdown', component_property='value'),
-    Input(component_id={'type': 'yaxis-dropdown'}, component_property='value')
+    Input(component_id='yaxis-dropdown', component_property='value')
 )
 def update_graph(country_chosen, indicator_chosen_yaxis):
     dff = df[df.Country_name.isin(country_chosen)]
     fig = px.line(data_frame=dff, x='year', y=indicator_chosen_yaxis, color='Country_name',
-                #   custom_data=['Country_name', 'Country_code', 'Life Expectancy'],
+                  custom_data=['Country_name', 'Country_code', 'Life Expectancy', 'year'],
                   labels={
                     "year": "Year"
                 })
@@ -298,16 +308,18 @@ def update_graph(country_chosen, indicator_chosen_yaxis):
     Input(component_id='my-graph', component_property='clickData'),
     Input(component_id='my-graph', component_property='selectedData'),
     Input(component_id='country_dropdown', component_property='value'),
-    Input(component_id={'type': 'yaxis-dropdown'}, component_property='value')
+    Input(component_id='yaxis-dropdown', component_property='value')
 )
 def update_pie_graph(hov_data, clk_data, slct_data, country_chosen, indicator_chosen_yaxis):
     if hov_data is None:
         dff2 = df[df.Country_name.isin(country_chosen)]
-        # dff2 = dff2[dff2.year == 2000]
+        dff2 = dff2[dff2.year == 2000]
         print(dff2)
-        fig2 = px.pie(data_frame=dff2, values='Country_name', names=indicator_chosen_yaxis,
+        # fig2 = px.pie(data_frame=dff2, values='Country_name', names=indicator_chosen_yaxis,
+        #               title=indicator_chosen_yaxis, color='Country_name')
+        fig2 = px.pie(dff2, values=indicator_chosen_yaxis, names=country_chosen,
                       title=indicator_chosen_yaxis, color='Country_name')
-        # fig2.update_traces(textposition='inside', textinfo='percent+label+value')
+        fig2.update_traces(textposition='inside', textinfo='percent+label+value')
         return fig2
     else:
         print(f'hover data: {hov_data}')
@@ -330,7 +342,7 @@ def update_pie_graph(hov_data, clk_data, slct_data, country_chosen, indicator_ch
     Input(component_id='my-graph', component_property='clickData'),
     Input(component_id='my-graph', component_property='selectedData'),
     Input(component_id='country_dropdown', component_property='value'),
-    Input(component_id={'type': 'yaxis-dropdown'}, component_property='value')
+    Input(component_id='yaxis-dropdown', component_property='value')
 )
 def update_map_graph(hov_data, clk_data, slct_data, country_chosen, indicator_chosen_yaxis):
     if hov_data is None:
