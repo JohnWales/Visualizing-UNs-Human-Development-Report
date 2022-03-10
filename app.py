@@ -222,14 +222,23 @@
 
 
 
+# from ensurepip import bootstrap
+from pydoc import classname
+from turtle import width
 import dash  # use Dash version 1.16.0 or higher for this app to work
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+from dash import html
 from dash.dependencies import Output, Input
 import plotly.express as px
 import pandas as pd
 import plotly.graph_objects as go
 
+import dash_bootstrap_components as dbc
+
+# external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+
+app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP])
+# app = dash.Dash(__name__, external_stylesheets = [dbc.themes.CYBORG])
 
 
 df = pd.read_csv('csv_files/all_data.csv')
@@ -238,54 +247,82 @@ df = pd.read_csv('csv_files/all_data.csv')
 df8 = df.copy()
 df8 = df8[['Life Expectancy','Human Development Index','Education Index','Income Index']]
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.layout = html.Div([
-    dcc.Dropdown(
-        id='yaxis-dropdown',
-        value=[],
-        # multi=True,
-        options=[{'label': n, 'value': n} for n in df8],
-        clearable=False,
-        placeholder="Select a value for the y-axis"
-    ),
-    dcc.Dropdown(id='country_dropdown',
+    dbc.Row([
+        dbc.Col([
+            html.H4('Choose Indicator', style={'font-size':'100%', 'text-align':'center', 'color': 'white'}),
+            dcc.Dropdown(
+                id='yaxis-dropdown',
                 value=[],
-                # value=['United States', 'Russian Federation'], 
-                multi=True,
-                clearable=True,
-                options=[{'label': x, 'value': x} for x in df.Country_name.unique()], 
-                placeholder="Select a Country"
-    ),
-
-    html.Div([
-        dcc.Graph(id='my-graph', figure={}, clickData=None, hoverData=None, # I assigned None for tutorial purposes. By defualt, these are None, unless you specify otherwise.
-            config={
-                'staticPlot': False,     # True, False
-                'scrollZoom': False,      # True, False
-                'doubleClick': 'reset',  # 'reset', 'autosize' or 'reset+autosize', False
-                'showTips': True,       # True, False
-                'displayModeBar': 'hover',  # True, False, 'hover'
-                'watermark': False,
-                'modeBarButtonsToRemove': ['pan2d','select2d', 'lasso2d', 'autoScale2d', 'resetScale2d', 'zoom2d'],
-                },
-            className='six columns'
+                options=[{'label': n, 'value': n} for n in df8],
+                clearable=False,
+                placeholder="Choose Indicator",
+                style={'font-size':'90%', 'padding':'0px 20px 20px 20px'}
             ),
-        dcc.Graph(id='pie-graph', figure={}, className='six columns',
-            config={
-                'modeBarButtonsToRemove': ['pan2d','select2d', 'lasso2d', 'autoScale2d', 'resetScale2d', 'zoom2d'],
-            }),
-        dcc.Graph(id='map-graph', figure={}, className='six columns',
-            config={
-                'modeBarButtonsToRemove': ['pan2d','select2d', 'lasso2d', 'autoScale2d', 'resetScale2d', 'zoom2d'],
-            })
-    ])
-])
+
+
+            html.H4('Choose Country', style={'font-size':'100%', 'text-align':'center', 'color': 'white'}),
+            dcc.Dropdown(id='country_dropdown',
+                        value=[],
+                        # value=['United States', 'Russian Federation'], 
+                        multi=True,
+                        clearable=True,
+                        options=[{'label': x, 'value': x} for x in df.Country_name.unique()], 
+                        placeholder="Select a Country",
+                        style={'font-size':'90%', 'padding':'0px 20px 20px 20px'},
+                        # style={'font-size':'90%', 'padding':'0px 20px 20px 20px', 'white-space':'nowrap', 'overflow-y': 'scroll', 'height':'50%'},
+            ),
+        ],
+        align="center",
+        width=2,
+        class_name="col1"
+        ),
+        
+    
+
+        dbc.Col(
+            dcc.Graph(id='line-graph', figure={}, clickData=None, hoverData=None, # I assigned None for tutorial purposes. By defualt, these are None, unless you specify otherwise.
+                config={
+                    'staticPlot': False,     # True, False
+                    'scrollZoom': False,      # True, False
+                    'doubleClick': 'reset',  # 'reset', 'autosize' or 'reset+autosize', False
+                    'showTips': True,       # True, False
+                    'displayModeBar': 'hover',  # True, False, 'hover'
+                    'watermark': False,
+                    'modeBarButtonsToRemove': ['pan2d','select2d', 'lasso2d', 'autoScale2d', 'resetScale2d', 'zoom2d']
+                    },
+                # className='six columns',
+                className='line_graph',
+            ),
+            width=6
+        ),
+        dbc.Col(
+            dcc.Graph(id='pie-graph', figure={}, className='six columns',
+                config={
+                    'modeBarButtonsToRemove': ['pan2d','select2d', 'lasso2d', 'autoScale2d', 'resetScale2d', 'zoom2d']
+                }
+            ),
+            width=3,
+            className='pie_chart',
+        )
+    ],class_name="row1"
+    ),
+    dbc.Row(
+        dbc.Col(
+            dcc.Graph(id='map-graph', figure={}, 
+            className='six columns',
+                config={
+                    'modeBarButtonsToRemove': ['pan2d','select2d', 'lasso2d', 'autoScale2d', 'resetScale2d', 'zoom2d']
+                }),
+            className="map_graph"
+    ),class_name="row2",
+    ),
+]) # End of layout
 
 
 @app.callback(
-    Output(component_id='my-graph', component_property='figure'),
+    Output(component_id='line-graph', component_property='figure'),
     Input(component_id='country_dropdown', component_property='value'),
     Input(component_id='yaxis-dropdown', component_property='value')
 )
@@ -294,9 +331,22 @@ def update_graph(country_chosen, indicator_chosen_yaxis):
     fig = px.line(data_frame=dff, x='year', y=indicator_chosen_yaxis, color='Country_name',
                   custom_data=['Country_name', 'Country_code', 'Life Expectancy', 'year'],
                   labels={
-                    "year": "Year"
+                    "year": "Year",
+                    "Country_name": "Country"
                 })
     fig.update_traces(mode='lines+markers')
+    fig.update_layout(legend_title="Country Name", hovermode="x", font_color="white",
+        legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.02,
+        xanchor="right",
+        x=1
+    )
+    )
+    fig.layout.plot_bgcolor = 'white'
+    fig.update_layout(font_color="black")
+    # fig.layout.paper_bgcolor = '#fff'
     return fig
 
 
@@ -304,9 +354,9 @@ def update_graph(country_chosen, indicator_chosen_yaxis):
 # Dash version 1.16.0 or higher
 @app.callback(
     Output(component_id='pie-graph', component_property='figure'),
-    Input(component_id='my-graph', component_property='hoverData'),
-    Input(component_id='my-graph', component_property='clickData'),
-    Input(component_id='my-graph', component_property='selectedData'),
+    Input(component_id='line-graph', component_property='hoverData'),
+    Input(component_id='line-graph', component_property='clickData'),
+    Input(component_id='line-graph', component_property='selectedData'),
     Input(component_id='country_dropdown', component_property='value'),
     Input(component_id='yaxis-dropdown', component_property='value')
 )
@@ -319,7 +369,9 @@ def update_pie_graph(hov_data, clk_data, slct_data, country_chosen, indicator_ch
         #               title=indicator_chosen_yaxis, color='Country_name')
         fig2 = px.pie(dff2, values=indicator_chosen_yaxis, names=country_chosen,
                       title=indicator_chosen_yaxis, color='Country_name')
-        fig2.update_traces(textposition='inside', textinfo='percent+label+value')
+        fig2.update_traces(textposition='inside', textinfo='percent+label+value', showlegend=False)
+        fig2.layout.plot_bgcolor = 'white'
+        fig2.update_layout(font_color="black")
         return fig2
     else:
         print(f'hover data: {hov_data}')
@@ -331,16 +383,18 @@ def update_pie_graph(hov_data, clk_data, slct_data, country_chosen, indicator_ch
         hov_year = hov_data['points'][0]['x']
         dff2 = dff2[dff2.year == hov_year]
         fig2 = px.pie(data_frame=dff2, values=indicator_chosen_yaxis, names='Country_name', title=f'{indicator_chosen_yaxis} {hov_year}', color='Country_name')
-        fig2.update_traces(textposition='inside', textinfo='percent+label+value')
+        fig2.update_traces(textposition='inside', textinfo='percent+label+value', showlegend=False)
+        fig2.layout.plot_bgcolor = 'white'
+        fig2.update_layout(font_color="black")
         return fig2
         
 
 
 @app.callback(
     Output(component_id='map-graph', component_property='figure'),
-    Input(component_id='my-graph', component_property='hoverData'),
-    Input(component_id='my-graph', component_property='clickData'),
-    Input(component_id='my-graph', component_property='selectedData'),
+    Input(component_id='line-graph', component_property='hoverData'),
+    Input(component_id='line-graph', component_property='clickData'),
+    Input(component_id='line-graph', component_property='selectedData'),
     Input(component_id='country_dropdown', component_property='value'),
     Input(component_id='yaxis-dropdown', component_property='value')
 )
@@ -349,8 +403,11 @@ def update_map_graph(hov_data, clk_data, slct_data, country_chosen, indicator_ch
         dff2 = df[df.Country_name.isin(country_chosen)]
         dff2 = dff2[dff2.year == 2000]
         print(dff2)
-        fig3 = px.choropleth(dff2, color="Country_name", scope="world", locations="Country_code", hover_name="Country_name", title="Map", 
-                    color_continuous_scale=px.colors.sequential.Plasma)   
+        fig3 = px.choropleth(dff2, color="Country_name", scope="world", locations="Country_code", hover_name="Country_name", 
+                    color_continuous_scale=px.colors.sequential.Plasma, projection="natural earth")  
+        fig3.update_traces(showlegend=False)  
+        fig3.layout.plot_bgcolor = 'white' 
+        fig3.update_layout(font_color="black")
         return fig3
     else:
         print(f'hover data: {hov_data}')
@@ -361,8 +418,11 @@ def update_map_graph(hov_data, clk_data, slct_data, country_chosen, indicator_ch
         dff2 = df[df.Country_name.isin(country_chosen)]
         hov_year = hov_data['points'][0]['x']
         dff2 = dff2[dff2.year == hov_year]
-        fig3 = px.choropleth(dff2, color="Country_name", scope="world", locations="Country_code", hover_name="Country_name", title="Map", 
-                    color_continuous_scale=px.colors.sequential.Plasma)        
+        fig3 = px.choropleth(dff2, color="Country_name", scope="world", locations="Country_code", hover_name="Country_name", 
+                    color_continuous_scale=px.colors.sequential.Plasma, projection="natural earth")  
+        fig3.update_traces(showlegend=False)   
+        fig3.layout.plot_bgcolor = 'white' 
+        fig3.update_layout(font_color="black")
         return fig3
 
 
