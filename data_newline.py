@@ -8,12 +8,12 @@ with open('original_data.txt', 'r') as data:
 
 
 # Writing comma
-with open('original_data.txt', 'r') as data:
-    with open('clean_data.txt', 'w') as result:
-        for line in data:
-            if line == '\n':
-                result.write(',')
-            result.write(line)
+# with open('original_data.txt', 'r') as data:
+#     with open('clean_data.txt', 'w') as result:
+#         for line in data:
+#             if line == '\n':
+#                 result.write(',')
+#             result.write(line)
 
 
 
