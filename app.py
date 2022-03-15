@@ -241,11 +241,12 @@ app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP])
 # app = dash.Dash(__name__, external_stylesheets = [dbc.themes.CYBORG])
 
 
-df = pd.read_csv('csv_files/all_data.csv')
-# df = pd.read_csv('csv_files/backup.csv')
+# df = pd.read_csv('csv_files/all_data.csv')
+df = pd.read_csv('csv_files/backup.csv')
 
 df8 = df.copy()
-df8 = df8[['Life Expectancy','Human Development Index','Education Index','Income Index']]
+# df8 = df8[['Life Expectancy','Human Development Index','Education Index','Income Index']]
+df8 = df8[['Life Expectancy','Human Development Index','Education Index','Income Index','Gross National Income']]
 
 
 app.layout = html.Div([

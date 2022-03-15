@@ -1,4 +1,4 @@
-# Creating newline
+## Creating newline
 # with open('original_data.txt', 'r') as data:
 #     with open('clean_data.txt', 'w') as result:
 #         for line in data:
@@ -7,13 +7,24 @@
 
 
 
-# Writing comma
+## Writing comma
+# with open('original_data.txt', 'r') as data:
+#     with open('clean_data.txt', 'w') as result:
+#         for line in data:
+#             if line == '\n':
+#                 result.write(',')
+#             result.write(line)
+
+
+## Removes unnecessary data after adding an indicator
 with open('original_data.txt', 'r') as data:
     with open('clean_data.txt', 'w') as result:
         for line in data:
-            if line == '\n':
-                result.write(',')
-            result.write(line)
+            if line.startswith(','):
+                result.write('\n')
+            else:
+                result.write(line)
+
 
 
 
