@@ -3,6 +3,12 @@ body {
     background-color: black;
 }
 
+.title {
+    text-align: center;
+    color: white;
+    margin: 20px;
+}
+
 .row1 {
     background-color: #F5F5F5;
     margin: 20px;

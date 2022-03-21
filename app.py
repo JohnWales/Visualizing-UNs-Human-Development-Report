@@ -37,6 +37,12 @@ country_df = ['Afghanistan' ,'Angola' ,'Albania' ,'Andorra' ,'United Arab Emirat
 
 app.layout = html.Div([
 
+    dbc.Row(
+        dbc.Col(
+        html.H1('VISUALISING THE UNs HUMAN DEVELOPMENT REPORT')
+        ),class_name="title",
+    ),
+
     dbc.Row([
         dbc.Col([
             html.H4('Choose Indicator', style={'font-size':'100%', 'text-align':'center', 'color': 'white'}),
