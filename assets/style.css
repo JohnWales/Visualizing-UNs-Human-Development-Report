@@ -1,43 +1,45 @@
 body {
-    background-color: #F5F5F5;
+    /* background-color: #F5F5F5; */
+    background-color: black;
 }
 
 .row1 {
     background-color: #F5F5F5;
+    margin: 20px;
+    border-radius: 5px;
+    /* max-height: 500px; */
 }
 
 .row2 {
     background-color: #F5F5F5;
+    margin: 20px;
+    border-radius: 5px;
 }
 
 .col1 {
     background-color: white;
     margin: 30px;
     /* border-radius: 10px; */
-    border: 5px solid red;
+    border: 5px solid black;
     border-radius: 50px;
     
 }
 
 .line_graph {
     margin: 20px 0px 20px 0px;
-    border: 5px solid red;
-    border-radius: 50px;
+    border: 5px solid black;
+    border-radius: 10px;
 }
 
 .pie_chart {
     margin: 20px 0px 20px 0px;
-    border: 5px solid red;
-    border-radius: 50px;
+    border: 5px solid black;
+    border-radius: 10px;
 }
 
 .map_graph {
     margin: 20px;
-    border: 5px solid red;
-    border-radius: 50px;
-}
-
-.row2 {
-    margin: 20px;
+    border: 5px solid black;
+    border-radius: 10px;
 }
 

@@ -244,6 +244,8 @@ app = dash.Dash(__name__, external_stylesheets = [dbc.themes.BOOTSTRAP])
 # df = pd.read_csv('csv_files/all_data.csv')
 df = pd.read_csv('csv_files/backup.csv')
 
+df9 = df.copy()
+
 df8 = df.copy()
 # df8 = df8[['Life Expectancy','Human Development Index','Education Index','Income Index','Gross National Income']]
 df8 = df8[['Life Expectancy','Human Development Index','Education Index','Income Index','Gross National Income',
@@ -252,8 +254,71 @@ df8 = df8[['Life Expectancy','Human Development Index','Education Index','Income
 
 country_df = ['Afghanistan' ,'Angola' ,'Albania' ,'Andorra' ,'United Arab Emirates','Argentina' ,'Armenia' ,'Antigua and Barbuda' ,'Australia' ,'Austria','Azerbaijan' ,'Burundi' ,'Belgium' ,'Benin' ,'Burkina Faso' ,'Bangladesh','Bulgaria' ,'Bahrain' ,'Bahamas' ,'Bosnia and Herzegovina' ,'Belarus','Belize' ,'Bolivia (Plurinational State of)' ,'Brazil' ,'Barbados','Brunei Darussalam' ,'Bhutan' ,'Botswana' ,'Central African Republic','Canada' ,'Switzerland' ,'Chile' ,'China' ,'Cote dIvoire','Cameroon','Congo (Democratic Republic of the)' ,'Congo' ,'Colombia' ,'Comoros','Cabo Verde' ,'Costa Rica' ,'Cuba' ,'Cyprus' ,'Czechia' ,'Germany' ,'Djibouti','Dominica' ,'Denmark' ,'Dominican Republic' ,'Algeria' ,'Ecuador' ,'Egypt','Eritrea' ,'Spain' ,'Estonia' ,'Ethiopia' ,'Finland' ,'Fiji' ,'France','Micronesia (Federated States of)' ,'Gabon' ,'United Kingdom' ,'Georgia','Ghana' ,'Guinea' ,'Gambia' ,'Guinea-Bissau' ,'Equatorial Guinea' ,'Greece','Grenada' ,'Guatemala' ,'Guyana' ,'Hong Kong, China (SAR)' ,'Honduras','Croatia' ,'Haiti' ,'Hungary' ,'Indonesia' ,'India' ,'Ireland','Iran (Islamic Republic of)' ,'Iraq' ,'Iceland' ,'Israel' ,'Italy' ,'Jamaica','Jordan' ,'Japan' ,'Kazakhstan' ,'Kenya' ,'Kyrgyzstan' ,'Cambodia' ,'Kiribati','Saint Kitts and Nevis' ,'Korea (Republic of)' ,'Kuwait','Lao Peoples Democratic Republic','Lebanon' ,'Liberia' ,'Libya','Saint Lucia' ,'Liechtenstein' ,'Sri Lanka' ,'Lesotho' ,'Lithuania','Luxembourg' ,'Latvia' ,'Morocco' ,'Moldova (Republic of)' ,'Madagascar','Maldives' ,'Mexico' ,'Marshall Islands' ,'North Macedonia' ,'Mali' ,'Malta','Myanmar' ,'Montenegro' ,'Mongolia' ,'Mozambique' ,'Mauritania' ,'Mauritius','Malawi' ,'Malaysia' ,'Namibia' ,'Niger' ,'Nigeria' ,'Nicaragua' ,'Netherlands','Norway' ,'Nepal' ,'New Zealand','Oman' ,'Pakistan' ,'Panama' ,'Peru','Philippines' ,'Palau' ,'Papua New Guinea' ,'Poland' ,'Portugal' ,'Paraguay','Palestine, State of' ,'Qatar' ,'Romania' ,'Russian Federation' ,'Rwanda','Saudi Arabia' ,'Sudan' ,'Senegal' ,'Singapore' ,'Solomon Islands','Sierra Leone' ,'El Salvador' ,'Serbia' ,'South Sudan','Sao Tome and Principe' ,'Suriname' ,'Slovakia' ,'Slovenia' ,'Sweden','Eswatini (Kingdom of)' ,'Seychelles' ,'Syrian Arab Republic' ,'Chad' ,'Togo','Thailand' ,'Tajikistan' ,'Turkmenistan' ,'Timor-Leste' ,'Tonga','Trinidad and Tobago' ,'Tunisia' ,'Turkey' ,'Tanzania (United Republic of)','Uganda' ,'Ukraine' ,'Uruguay' ,'United States' ,'Uzbekistan','Saint Vincent and the Grenadines' ,'Venezuela (Bolivarian Republic of)','Viet Nam' ,'Vanuatu' ,'Samoa' ,'Yemen' ,'South Africa' ,'Zambia' ,'Zimbabwe']
 
+# df['Total Population'].fillna(value=df['Total Population'].mean(), inplace=True)
 
 app.layout = html.Div([
+
+    dcc.Slider(
+        # min = 1990,
+        # max = 2019,
+        # dots = False,
+        df9['year'].min(),
+        df9['year'].max(),
+        step=None,
+        value=df['year'].min(),
+        marks={str(year): str(year) for year in df['year'].unique()},
+        id='year-slider'
+    ),
+    dbc.Row([
+        dbc.Col([
+            html.H4('Choose Indicator', style={'font-size':'100%', 'text-align':'center', 'color': 'white'}),
+            dcc.Dropdown(
+                id='scatter-indicator-dropdown',
+                value=[],
+                options=[{'label': n, 'value': n} for n in df8],
+                clearable=False,
+                placeholder="Choose Indicator",
+                style={'font-size':'90%', 'padding':'0px 20px 20px 20px'}
+            ),
+
+
+            html.H4('Choose Country', style={'font-size':'100%', 'text-align':'center', 'color': 'white'}),
+            dcc.Dropdown(id='country-scatter-dropdown',
+                        value=[],
+                        # value=['United States', 'Russian Federation'], 
+                        multi=True,
+                        clearable=True,
+                        options=[{'label': x, 'value': x} for x in df.Country_name.unique()], 
+                        # options=[{'label': x, 'value': x} for x in country_df], 
+                        placeholder="Select a Country",
+                        style={'font-size':'90%', 'padding':'0px 20px 20px 20px'},
+                        # style={'font-size':'90%', 'padding':'0px 20px 20px 20px', 'white-space':'nowrap', 'overflow-y': 'scroll', 'height':'50%'},
+            ),
+        ],
+        align="center",
+        width=2,
+        class_name="col1"
+        ),
+
+        dbc.Col(
+            dcc.Graph(id='scatter-graph-with-slider', figure={}, clickData=None, hoverData=None, # I assigned None for tutorial purposes. By defualt, these are None, unless you specify otherwise.
+                config={
+                    'staticPlot': False,     # True, False
+                    'scrollZoom': False,      # True, False
+                    'doubleClick': 'reset',  # 'reset', 'autosize' or 'reset+autosize', False
+                    'showTips': True,       # True, False
+                    'displayModeBar': 'hover',  # True, False, 'hover'
+                    'watermark': False,
+                    'modeBarButtonsToRemove': ['pan2d','select2d', 'lasso2d', 'autoScale2d', 'resetScale2d', 'zoom2d']
+                    },
+                # className='six columns',
+                className='scatter',
+            ),
+            width=9
+        ),
+    ]),
+
+
     dbc.Row([
         dbc.Col([
             html.H4('Choose Indicator', style={'font-size':'100%', 'text-align':'center', 'color': 'white'}),
@@ -324,7 +389,30 @@ app.layout = html.Div([
             className="map_graph"
     ),class_name="row2",
     ),
-]) # End of layout
+]) 
+# End of layout
+
+
+
+
+@app.callback(
+    Output('scatter-graph-with-slider', 'figure'),
+    Input('year-slider', 'value'),
+    Input('country-scatter-dropdown', 'value'),
+    Input('scatter-indicator-dropdown', 'value')
+)
+
+def update_figure(selected_year, country_chosen, indicator_chosen_yaxis):
+    # filtered_df = df[df.Country_name.isin(country_chosen)], df[df.year == selected_year]
+    # filtered_df = df[df.Country_name.isin(country_chosen)]
+    filtered_df = df[df.year == selected_year]
+    fig = px.scatter(filtered_df, x='Country_name', y=indicator_chosen_yaxis,
+                        size='Total Population', color='Country_name', size_max=55)
+
+    fig.update_layout(transition_duration=500)
+    return fig
+
+
 
 
 @app.callback(
@@ -352,7 +440,7 @@ def update_graph(country_chosen, indicator_chosen_yaxis):
     )
     fig.layout.plot_bgcolor = 'white'
     fig.update_layout(font_color="black")
-    # fig.layout.paper_bgcolor = '#fff'
+    # fig.add_bar(x='year', y=indicator_chosen_yaxis)
     return fig
 
 
