@@ -243,11 +243,6 @@ def update_pie_graph(hov_data, clk_data, slct_data, country_chosen, indicator_ch
         fig2.update_layout(font_color="black")
         return fig2
     else:
-        print(f'hover data: {hov_data}')
-        # print(hov_data['points'][0]['customdata'][0])
-        # print(f'click data: {clk_data}')
-        # print(f'selected data: {slct_data}')
-
         dff2 = df[df.Country_name.isin(country_chosen)]
         hov_year = hov_data['points'][0]['x']
         dff2 = dff2[dff2.year == hov_year]
@@ -271,7 +266,6 @@ def update_map_graph(hov_data, clk_data, slct_data, country_chosen, indicator_ch
     if hov_data is None:
         dff2 = df[df.Country_name.isin(country_chosen)]
         dff2 = dff2[dff2.year == 2019]
-        print(dff2)
         fig3 = px.choropleth(dff2, color="Country_name", scope="world", locations="Country_code", hover_name="Country_name", 
                     color_continuous_scale=px.colors.sequential.Plasma, projection="natural earth")  
         fig3.update_traces(showlegend=False)  
@@ -279,11 +273,6 @@ def update_map_graph(hov_data, clk_data, slct_data, country_chosen, indicator_ch
         fig3.update_layout(font_color="black")
         return fig3
     else:
-        print(f'hover data: {hov_data}')
-        # print(hov_data['points'][0]['customdata'][0])
-        # print(f'click data: {clk_data}')
-        # print(f'selected data: {slct_data}')
-
         dff2 = df[df.Country_name.isin(country_chosen)]
         hov_year = hov_data['points'][0]['x']
         dff2 = dff2[dff2.year == hov_year]
@@ -295,8 +284,6 @@ def update_map_graph(hov_data, clk_data, slct_data, country_chosen, indicator_ch
         return fig3
 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------#
-
-
 
 if __name__ == '__main__':
     app.run_server(debug=True)
