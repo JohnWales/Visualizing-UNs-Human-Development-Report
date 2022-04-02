@@ -39,7 +39,7 @@ app.layout = html.Div([
 
     dbc.Row(
         dbc.Col(
-        html.H1('VISUALISING THE UNs HUMAN DEVELOPMENT REPORT')
+        html.H1('VISUALIZING THE UNs HUMAN DEVELOPMENT REPORT')
         ),class_name="title",
     ),
 
@@ -89,7 +89,7 @@ app.layout = html.Div([
     
 
         dbc.Col(
-            dcc.Graph(id='line-graph', figure={}, clickData=None, hoverData=None, # I assigned None for tutorial purposes. By defualt, these are None, unless you specify otherwise.
+            dcc.Graph(id='line-graph', figure={}, clickData=None, hoverData=None, 
                 config={
                     'staticPlot': False,     # True, False
                     'scrollZoom': False,      # True, False
