@@ -39,7 +39,7 @@ app.layout = html.Div([
 
     dbc.Row(
         dbc.Col(
-        html.H1('VISUALIZING THE UNs HUMAN DEVELOPMENT REPORT')
+        html.H1('VISUALIZING THE UN HUMAN DEVELOPMENT REPORT')
         ),class_name="title",
     ),
 
@@ -287,4 +287,5 @@ def update_map_graph(hov_data, clk_data, slct_data, country_chosen, indicator_ch
 
 if __name__ == '__main__':
     app.run_server(debug=True)
+    # app.run_server(debug=False)
 
