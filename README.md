@@ -9,7 +9,7 @@ There are a countless number of findings received through the individual use of 
 The United Nations have created an application where they also visualised the Human Development Report, but up until recently they have privatised it. Users must now pay for this product in order to use it. The aim of this project was to provide free access for users to visualise the same data. Everyone should have the right to freely access an application such as this, hence why it was created. 
 
 
-# Installation & Running
+## Installation & Running
 
 Ensure you have the latest version of python installed on your machine.
 Ensure you have a browser such as Chrome installed.
