@@ -1,4 +1,4 @@
-# Visualizing UN's Human Development Report
+# Visualizing UN Human Development Report
 
 ## Abstract
 
