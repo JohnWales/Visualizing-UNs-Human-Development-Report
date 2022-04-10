@@ -9,6 +9,27 @@ There are a countless number of findings received through the individual use of 
 The United Nations have created an application where they also visualised the Human Development Report, but up until recently they have privatised it. Users must now pay for this product in order to use it. The aim of this project was to provide free access for users to visualise the same data. Everyone should have the right to freely access an application such as this, hence why it was created. 
 
 
+# Installation & Running
+
+Ensure you have the latest version of python installed on your machine.
+Ensure you have a browser such as Chrome installed.
+The following packages need to be installed through your terminal:
+- pip install dash
+- pip install plotly
+- pip install pandas
+- pip install dash-bootstrap-components
+
+Once this has been completed you can use the git clone command and paste in the URL that you can copy from the green code button at the top here on GitHub. 
+Locate that file on your local machine and proceed to type: 
+- python app.py
+- OR
+- python3 app.py
+
+Copy the URL provided by the terminal which is:
+- http://127.0.0.1:8050/
+
+Paste it into your suitable browser and play with the app!
+
 ## Visualizations
 
 #### Line Plot
